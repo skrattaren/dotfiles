@@ -1,0 +1,28 @@
+Xcursor.theme: Vanilla-DMZ-AA
+
+yeahconsole*term:urxvtc -pe tabbed
+yeahconsole*toggleKey:None+F11
+yeahconsole*toggleKey:None+F12
+yeahconsole*consoleHeight:49
+#yeahconsole*aniDelay:13
+
+URxvt*transparent: true
+URxvt*tintColor: Black
+URxvt*shading:31
+URxvt*saveLines:13000
+URxvt*foreground:White
+URxvt*background:Black
+#URxvt*font: xft:DejaVu Sans Mono:pixelsize=13
+URxvt*font: xft:Droid Sans Mono:pixelsize=13
+# Replace blue folder colors with a lighter shade for clarity
+URxvt*color4: RoyalBlue
+URxvt*color12: RoyalBlue
+URxvt*scrollBar:true
+#URxvt*scrollstyle:xterm
+URxvt*scrollBar_right:true
+URxvt*scrollTtyOutput: False
+URxvt*scrollWithBuffer: True
+#URxvt*jumpScroll: False
+URxvt*skipScroll: False
+
+#Xft.dpi: 120.0
