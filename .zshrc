@@ -77,9 +77,9 @@ alias rmf='nocorrect rm -f'     # принудимтельное удалени�
 alias rmrf='nocorrect rm -fR'   # принудительное рекурсивное удаление
 alias mkdir='nocorrect mkdir'   # создание каталогов без коррекции
 
-#alias zpixssh='TERM="xterm" ssh nshujsky@shader.medialand.ru' # Соединиться с серваком
 alias zpixssh='TERM="xterm" ssh nshujsky@pixel.medialand.ru'
-#alias toonzpix='TERM="xterm" ssh nshujsky@pixel.medialand.ru -R 6666:127.0.0.1:3690'
+
+alias esync='layman -S && eix-sync -C --quiet'
 alias amd64='ACCEPT_KEYWORDS="~amd64" emerge -pv '
 
 alias rundjangoserver="python ~/zeropixel/manage.py runserver 0.0.0.0:8000"
