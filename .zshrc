@@ -77,13 +77,8 @@ alias rmf='nocorrect rm -f'     # принудимтельное удалени�
 alias rmrf='nocorrect rm -fR'   # принудительное рекурсивное удаление
 alias mkdir='nocorrect mkdir'   # создание каталогов без коррекции
 
-alias zpixssh='TERM="xterm" ssh nshujsky@pixel.medialand.ru'
-
 alias esync='layman -S && eix-sync -C --quiet'
 alias amd64='ACCEPT_KEYWORDS="~amd64" emerge -pv '
-
-alias rundjangoserver="python ~/zeropixel/manage.py runserver 0.0.0.0:8000"
-alias dbshell="python ~/zeropixel/manage.py dbshell"
 
 alias pygbb="pygmentize -f bbcode "
 
@@ -142,5 +137,4 @@ if [[ -r ~/.aliases ]]; then
          # Список хостов, к которым будет применяться автодополнение
          # # при наборе в командной строке
          # # например, как аргументов браузера или ftp-клиента (see later zstyle)
-         hosts=(www-proxy.ioffe.rssi.ru 192.168.1.10 vpn.lan)
-#cd && clear
+         hosts=()
