@@ -51,7 +51,7 @@ bindkey "^[u"   undo
 bindkey "^[r"   redo
 #bindkey "^[[C"  
 
-EDITOR="nano"
+EDITOR="vim"
 BROWSER="opera"
 # -newtab -notrayicon"
 #BROWSER="arora"
