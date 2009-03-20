@@ -83,6 +83,7 @@ alias amd64='ACCEPT_KEYWORDS="~amd64" emerge -pv '
 alias pygbb="pygmentize -f bbcode "
 
 alias reload_conkyrc="killall -SIGHUP conky"
+alias kern_make="mv /boot/kernel-2.6.28 /boot/kernel-2.6.28_ && make -j2 && make modules_install && cp -L arch/x86/boot/bzImage /boot/kernel-2.6.28"
 
 # prompt
 autoload -U promptinit
