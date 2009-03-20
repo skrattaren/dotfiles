@@ -82,7 +82,7 @@ alias amd64='ACCEPT_KEYWORDS="~amd64" emerge -pv '
 
 alias pygbb="pygmentize -f bbcode "
 
-# alias newpkgbuild='sed -i "s/200[0-9]*/`echo $(date +%Y%m%d) - 1 | bc`/"'
+alias reload_conkyrc="killall -SIGHUP conky"
 
 # prompt
 autoload -U promptinit
