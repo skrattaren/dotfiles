@@ -1,4 +1,5 @@
 Xcursor.theme: Vanilla-DMZ-AA
+#Xcursor.theme: Chameleon-DarkSkyBlue-Small
 
 yeahconsole*term:urxvtc -pe tabbed
 yeahconsole*toggleKey:None+F11
@@ -26,4 +27,4 @@ URxvt*scrollWithBuffer: True
 #URxvt*jumpScroll: False
 URxvt*skipScroll: False
 
-#Xft.dpi: 120.0
+Xft.dpi: 120.0
