@@ -66,6 +66,7 @@ include "/usr/share/X11/locale/en_US.UTF-8/Compose"
 #<Multi_key> <Cyrillic_yeru>     : "§"   section      # SECTION SIG
 #<Multi_key> <s>                 : "§"   section      # SECTION SIGN
 <Multi_key> <Cyrillic_shcha>    : "°"   degree       # DEGREE SIGN
+<Multi_key> <0> <0>    		: "°"   degree       # DEGREE SIGN
 #<Multi_key> <o>                 : "°"   degree       # DEGREE SIGN
 <Multi_key> <space>             : " "   nobreakspace # NO-BREAK SPACE
 #<Multi_key> <Cyrillic_ve>       : "…"   ellipsis     # HORIZONTAL ELLIPSIS
