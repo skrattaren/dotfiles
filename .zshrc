@@ -1,3 +1,6 @@
+# Sourcing so sourcing
+source /etc/profile
+
 # History settings
 HISTFILE=~/.histfile
 HISTSIZE=3000
