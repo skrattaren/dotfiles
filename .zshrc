@@ -1,5 +1,5 @@
 # Sourcing so sourcing
-source /etc/profile
+source /etc/zsh/zprofile
 
 # History settings
 HISTFILE=~/.histfile
@@ -81,9 +81,10 @@ alias rmrf='nocorrect rm -fR'   # принудительное рекурсив�
 alias mkdir='nocorrect mkdir'   # создание каталогов без коррекции
 
 alias esync='layman -S && eix-sync -C --quiet'
-alias amd64='ACCEPT_KEYWORDS="~amd64" emerge -pv '
+alias amd64='ACCEPT_KEYWORDS="~amd64" emerge -pv'
 
-alias pygbb="pygmentize -f bbcode "
+alias pygbb="pygmentize -f bbcode"
+alias imgpost="uimge -i --bt"
 
 alias reload_conkyrc="killall -SIGHUP conky"
 alias kern_make="mv /boot/kernel-2.6.28 /boot/kernel-2.6.28_ && make -j2 && make modules_install && cp -L arch/x86/boot/bzImage /boot/kernel-2.6.28"
