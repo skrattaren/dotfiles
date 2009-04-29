@@ -28,6 +28,23 @@ include "/usr/share/X11/locale/en_US.UTF-8/Compose"
 #<Multi_key> <Cyrillic_E>        : "”"   U201d # RIGHT DOUBLE QUOTATION MARK
 #<Multi_key> <quotedbl>          : "”"   U201d # RIGHT DOUBLE QUOTATION MARK
 
+# Additional cyrillic
+#
+<Multi_key> <Cyrillic_I>	: "І" 
+<Multi_key> <Cyrillic_i>	: "і"
+<Multi_key> <Cyrillic_U>	: "Ў" 
+<Multi_key> <Cyrillic_u>	: "ў"
+
+<Multi_key> <Cyrillic_GHE>	: "Ґ"
+<Multi_key> <Cyrillic_ghe>	: "ґ"
+<Multi_key> <Cyrillic_IE>	: "Є" 
+<Multi_key> <Cyrillic_ie>	: "є"
+<Multi_key> <Cyrillic_SHORTI>	: "Ї"
+<Multi_key> <Cyrillic_shorti>	: "ї"
+
+<Multi_key> <Cyrillic_HARDSIGN>	: "Ѣ"
+<Multi_key> <Cyrillic_hardsign>	: "ѣ"
+
 #
 # Dashes
 #
@@ -37,10 +54,10 @@ include "/usr/share/X11/locale/en_US.UTF-8/Compose"
 #
 # Currencies
 #
-<Multi_key> <Cyrillic_u>        : "€"   EuroSign     # EURO SIGN
-<Multi_key> <e>                 : "€"   EuroSign     # EURO SIGN
-<Multi_key> <Cyrillic_a>        : "£"   sterling     # POUND SIGN
-<Multi_key> <f>                 : "£"   sterling     # POUND SIGN
+#<Multi_key> <Cyrillic_u>        : "€"   EuroSign     # EURO SIGN
+#<Multi_key> <e>                 : "€"   EuroSign     # EURO SIGN
+#<Multi_key> <Cyrillic_a>        : "£"   sterling     # POUND SIGN
+#<Multi_key> <f>                 : "£"   sterling     # POUND SIGN
 
 #
 # Trademarks
@@ -49,7 +66,7 @@ include "/usr/share/X11/locale/en_US.UTF-8/Compose"
 #<Multi_key> <c>                 : "©"   copyright    # COPYRIGHT SIGN
 <Multi_key> <Cyrillic_ka>       : "®"   registered   # REGISTERED SIGN
 #<Multi_key> <r>                 : "®"   registered   # REGISTERED SIGN
-<Multi_key> <Cyrillic_ie>       : "™"   U2122        # TRADE MARK SIGN
+#<Multi_key> <Cyrillic_ie>       : "™"   U2122        # TRADE MARK SIGN
 #<Multi_key> <t>                 : "™"   U2122        # TRADE MARK SIGN
 
 #
@@ -65,7 +82,7 @@ include "/usr/share/X11/locale/en_US.UTF-8/Compose"
 #
 #<Multi_key> <Cyrillic_yeru>     : "§"   section      # SECTION SIG
 #<Multi_key> <s>                 : "§"   section      # SECTION SIGN
-<Multi_key> <Cyrillic_shcha>    : "°"   degree       # DEGREE SIGN
+#<Multi_key> <Cyrillic_shcha>    : "°"   degree       # DEGREE SIGN
 <Multi_key> <0> <0>    		: "°"   degree       # DEGREE SIGN
 #<Multi_key> <o>                 : "°"   degree       # DEGREE SIGN
 <Multi_key> <space>             : " "   nobreakspace # NO-BREAK SPACE
@@ -77,15 +94,15 @@ include "/usr/share/X11/locale/en_US.UTF-8/Compose"
 #
 <Multi_key> <3>                 : "#"   numbersign   # NUMBER SIGN
 <Multi_key> <4>                 : "$"   dollar       # DOLLAR SIGN
-<Multi_key> <Cyrillic_ha>       : "["   bracketleft  # LEFT SQUARE BRACKET
-<Multi_key> <Cyrillic_hardsign> : "]"   bracketright # RIGHT SQUARE BRACKET
+#<Multi_key> <Cyrillic_ha>       : "["   bracketleft  # LEFT SQUARE BRACKET
+#<Multi_key> <Cyrillic_hardsign> : "]"   bracketright # RIGHT SQUARE BRACKET
 
 #
 # Bindings to ease usage with the Russian `typewriter' layout.
 # NB: Unable to bind dollar symbol to be Compose+4, it's Compose+Shift+4.
 #
-<Multi_key> <2>                 : "—"   emdash       # EM DASH
-<Multi_key> <8>                 : "–"   endash       # EN DASH
-<Multi_key> <slash>             : "#"   numbersign   # NUMBER SIGN
+#<Multi_key> <2>                 : "—"   emdash       # EM DASH
+#<Multi_key> <8>                 : "–"   endash       # EN DASH
+#<Multi_key> <slash>             : "#"   numbersign   # NUMBER SIGN
 <Multi_key> <percent>           : "‰"   U2030        # PER MILLE SIGN
-<Multi_key> <bar>               : "±"   plusminus    # PLUS-MINUS SIGN
+#<Multi_key> <bar>               : "±"   plusminus    # PLUS-MINUS SIGN
