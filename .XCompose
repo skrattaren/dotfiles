@@ -37,8 +37,8 @@ include "/usr/share/X11/locale/en_US.UTF-8/Compose"
 
 <Multi_key> <Cyrillic_GHE>	: "Ґ"
 <Multi_key> <Cyrillic_ghe>	: "ґ"
-<Multi_key> <Cyrillic_IE>	: "Є" 
-<Multi_key> <Cyrillic_ie>	: "є"
+<Multi_key> <Cyrillic_E>	: "Є" 
+<Multi_key> <Cyrillic_e>	: "є"
 <Multi_key> <Cyrillic_SHORTI>	: "Ї"
 <Multi_key> <Cyrillic_shorti>	: "ї"
 
@@ -66,7 +66,7 @@ include "/usr/share/X11/locale/en_US.UTF-8/Compose"
 #<Multi_key> <c>                 : "©"   copyright    # COPYRIGHT SIGN
 <Multi_key> <Cyrillic_ka>       : "®"   registered   # REGISTERED SIGN
 #<Multi_key> <r>                 : "®"   registered   # REGISTERED SIGN
-#<Multi_key> <Cyrillic_ie>       : "™"   U2122        # TRADE MARK SIGN
+<Multi_key> <Cyrillic_te> <Cyrillic_em>      : "™"   U2122        # TRADE MARK SIGN
 #<Multi_key> <t>                 : "™"   U2122        # TRADE MARK SIGN
 
 #
