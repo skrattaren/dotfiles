@@ -55,7 +55,7 @@ bindkey "^[r"   redo
 #bindkey "^[[C"  
 
 EDITOR="vim"
-BROWSER="opera"
+#BROWSER="opera"
 # -newtab -notrayicon"
 #BROWSER="arora"
 XTERM="urxvtc -pe tabbed"
