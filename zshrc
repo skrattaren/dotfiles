@@ -87,7 +87,7 @@ alias pygbb="pygmentize -f bbcode"
 alias imgpost="uimge -i --bt"
 
 alias reload_conkyrc="killall -SIGHUP conky"
-alias kern_make="mv /boot/kernel-2.6.29 /boot/kernel-2.6.29_ && make -j2 && make modules_install && cp -L arch/x86/boot/bzImage /boot/kernel-2.6.29"
+alias kern_make="mv /boot/kernel-2.6.30 /boot/kernel-2.6.30_ && make -j2 && make modules_install && cp -L arch/x86/boot/bzImage /boot/kernel-2.6.30"
 
 # prompt
 autoload -U promptinit
