@@ -26,5 +26,8 @@ URxvt*scrollTtyOutput: False
 URxvt*scrollWithBuffer: True
 #URxvt*jumpScroll: False
 URxvt*skipScroll: False
+URxvt.perl-ext: default,matcher,tabbed
+URxvt.urlLauncher: opera
+URxvt.matcher.button: 1
 
 Xft.dpi: 120.0
