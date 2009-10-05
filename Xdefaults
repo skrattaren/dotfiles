@@ -9,21 +9,23 @@ yeahconsole*consoleHeight:49
 
 URxvt*transparent: true
 URxvt*tintColor: Black
-URxvt*shading:31
+URxvt*shading: 17
 URxvt*saveLines:13000
-URxvt*foreground:White
-URxvt*background:Black
-#DejaVu Sans Mono,Droid Sans Mono,Inconsolata,Luxi Mono
+URxvt*foreground: White
+URxvt*background: Black
 URxvt*font: xft:Terminus:pixelsize=17
+#DejaVu Sans Mono,Droid Sans Mono,Inconsolata,Luxi Mono
 #URxvt*font: xft::pixelsize=13
+
 # Replace blue folder colors with a lighter shade for clarity
 URxvt*color4: RoyalBlue
 URxvt*color12: RoyalBlue
+
 URxvt*scrollBar:true
-#URxvt*scrollstyle:xterm
 URxvt*scrollBar_right:true
 URxvt*scrollTtyOutput: False
 URxvt*scrollWithBuffer: True
+
 #URxvt*jumpScroll: False
 URxvt*skipScroll: False
 URxvt.perl-ext: default,matcher,tabbed
