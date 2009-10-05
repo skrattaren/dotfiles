@@ -84,7 +84,7 @@ alias esync='layman -S && eix-sync -C --quiet'
 alias amd64='ACCEPT_KEYWORDS="~amd64" emerge -pv'
 
 alias pygbb="pygmentize -f bbcode"
-alias imgpost="uimge -i --bt"
+alias imgpost="uimge -i --usr=#url#"
 
 alias reload_conkyrc="killall -SIGHUP conky"
 alias kern_make="mv /boot/kernel-2.6.30 /boot/kernel-2.6.30_ && make -j2 && make modules_install && cp -L arch/x86/boot/bzImage /boot/kernel-2.6.30"
