@@ -52,7 +52,8 @@ bindkey "^[[4~" end-of-line
 bindkey " "     magic-space
 bindkey "^[u"   undo
 bindkey "^[r"   redo
-#bindkey "^[[C"  
+
+bindkey "^R"	history-incremental-search-backward
 
 EDITOR="vim"
 #BROWSER="opera"
