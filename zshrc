@@ -56,15 +56,11 @@ bindkey "^[r"   redo
 bindkey "^R"	history-incremental-search-backward
 
 EDITOR="vim"
-#BROWSER="opera"
-# -newtab -notrayicon"
-#BROWSER="arora"
 XTERM="urxvtc -pe tabbed"
 
 alias -s gz=tar -xzf
 alias -s bz2=tar -xjf
 alias -s txt=$EDITOR
-#alias -s PKGBUILD=$EDITOR
 
 alias ls='ls -h --color=auto --group-directories-first'
 alias flash='mount /mnt/flash'
@@ -126,21 +122,4 @@ zstyle ':completion:*' completer _oldlist _expand _force_rehash _complete
 # вместо cd /path/to/file вводим лишь путь
 setopt autocd
 
-# aliases
-if [[ -r ~/.aliases ]]; then
-   . ~/.aliases
-   fi
-   
-   # global aliases
-   if [[ -r ~/.galiases ]]; then
-      . ~/.galiases
-      fi
-      
-      #if [ -f /usr/share/mc/mc.gentoo ]; then
-         #. /usr/share/mc/mc.gentoo
-         #fi
-         
-         # Список хостов, к которым будет применяться автодополнение
-         # # при наборе в командной строке
-         # # например, как аргументов браузера или ftp-клиента (see later zstyle)
-         hosts=()
+
