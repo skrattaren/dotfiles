@@ -2,7 +2,6 @@ Xcursor.theme: Vanilla-DMZ-AA
 #Xcursor.theme: Chameleon-DarkSkyBlue-Small
 
 yeahconsole*term:urxvtc -pe tabbed
-yeahconsole*toggleKey:None+F11
 yeahconsole*toggleKey:None+F12
 yeahconsole*consoleHeight:49
 #yeahconsole*aniDelay:13
