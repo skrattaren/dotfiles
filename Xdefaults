@@ -24,8 +24,9 @@ URxvt*font: xft:Terminus:pixelsize=17
 URxvt*color4: RoyalBlue
 URxvt*color12: RoyalBlue
 
-URxvt*scrollBar:true
-URxvt*scrollBar_right:true
+URxvt*scrollBar: true
+URxvt*scrollBar_right: true
+URxvt.scrollstyle: plain
 URxvt*scrollTtyOutput: False
 URxvt*scrollWithBuffer: True
 
