@@ -12,6 +12,10 @@ URxvt*shading: 17
 URxvt*saveLines:13000
 URxvt*foreground: White
 URxvt*background: Black
+URxvt.tabbed.tabbar-fg: 2
+URxvt.tabbed.tabbar-bg: 0
+URxvt.tabbed.tab-fg:    0
+URxvt.tabbed.tab-bg:    2
 URxvt*font: xft:Terminus:pixelsize=17
 #DejaVu Sans Mono,Droid Sans Mono,Inconsolata,Luxi Mono
 #URxvt*font: xft::pixelsize=13
