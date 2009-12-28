@@ -12,9 +12,9 @@ URxvt*shading: 17
 URxvt*saveLines:13000
 URxvt*foreground: White
 URxvt*background: Black
-URxvt*font: xft:Terminus:pixelsize=17
+#URxvt*font: xft:Terminus:pixelsize=17
 #DejaVu Sans Mono,Droid Sans Mono,Inconsolata,Luxi Mono
-#URxvt*font: xft::pixelsize=13
+URxvt*font: xft:Droid Sans Mono:pixelsize=13
 
 # Replace blue folder colors with a lighter shade for clarity
 URxvt*color4: RoyalBlue
