@@ -25,6 +25,9 @@ setopt autocd
 setopt nohup
 setopt HASH_CMDS
 
+# Don't fail on unsuccessful globbing
+unsetopt NOMATCH
+
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
@@ -84,7 +87,7 @@ alias pygbb="pygmentize -f bbcode"
 alias imgpost="uimge -i --usr=#url#"
 
 alias reload_conkyrc="killall -SIGHUP conky"
-alias kern_make="mv /boot/kernel-2.6.31 /boot/kernel-2.6.31_ && make -j2 && make modules_install && cp -L arch/x86/boot/bzImage /boot/kernel-2.6.31"
+alias kern_make="mv /boot/kernel-2.6.32 /boot/kernel-2.6.32_ ; make -j2 && make modules_install && cp -L arch/x86/boot/bzImage /boot/kernel-2.6.32"
 
 # prompt
 autoload -U promptinit
