@@ -61,10 +61,6 @@ bindkey "^R"	history-incremental-search-backward
 EDITOR="vim"
 XTERM="urxvtc -pe tabbed"
 
-alias -s gz=tar -xzf
-alias -s bz2=tar -xjf
-alias -s txt=$EDITOR
-
 alias ls='ls -h --color=auto --group-directories-first'
 alias flash='mount /mnt/flash'
 alias df='df -m'
