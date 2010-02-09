@@ -61,17 +61,10 @@ bindkey "^R"	history-incremental-search-backward
 EDITOR="vim"
 XTERM="urxvtc -pe tabbed"
 
-alias -s gz=tar -xzf
-alias -s bz2=tar -xjf
-alias -s txt=$EDITOR
-
 alias ls='ls -h --color=auto --group-directories-first'
 alias flash='mount /mnt/flash'
 alias df='df -m'
 alias lsl='ls -hl --color=auto --group-directories-first'
-
-alias zhist='cat ~/.histfile | grep '	# grep in zsh history
-alias oldlop='genlop -f /var/log/emerge.log.old -t'
 
 alias mv='nocorrect mv -i'      # переименование-перемещение c пogтвepжgeнueм
 alias cp='nocorrect cp -Ri'     # рекурсивное копирование с подтверждением
@@ -86,7 +79,6 @@ alias amd64='ACCEPT_KEYWORDS="~amd64" emerge -pv'
 alias pygbb="pygmentize -f bbcode"
 alias imgpost="uimge -i --usr=#url#"
 
-alias reload_conkyrc="killall -SIGHUP conky"
 alias kern_make="mv /boot/kernel-2.6.32 /boot/kernel-2.6.32_ ; make -j2 && make modules_install && cp -L arch/x86/boot/bzImage /boot/kernel-2.6.32"
 
 # prompt
