@@ -18,6 +18,7 @@ setopt SHARE_HISTORY
 # Let the user edit the command line after history expansion (e.g. !ls) instead of immediately running it
 setopt hist_verify
 
+setopt extended_glob
 setopt noequals
 setopt nobeep
 setopt CORRECT
