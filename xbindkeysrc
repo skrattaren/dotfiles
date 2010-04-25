@@ -1,0 +1,27 @@
+"opera"
+  Mod4 + o
+
+"psi"
+  Mod4 + p
+
+"mpc toggle"
+  XF86AudioPlay
+
+"mpc stop"
+  XF86AudioStop
+
+"mpc prev"
+  XF86AudioPrev
+
+"mpc next"
+  XF86AudioNext
+
+"mpc single"
+  XF86AudioMute
+
+"amixer set Master 5%+"
+  XF86AudioRaiseVolume
+
+"amixer set Master 5%-"
+  XF86AudioLowerVolume
+
