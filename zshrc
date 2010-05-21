@@ -78,6 +78,11 @@ alias amd64='ACCEPT_KEYWORDS="~amd64" emerge -pv'
 alias pygbb="pygmentize -f bbcode"
 alias imgpost="uimge -i --usr=#url#"
 
+
+# Alias functions
+youmplayer () { mplayer `youtube-dl -gb $1` }
+
+
 # prompt
 autoload -U promptinit
 promptinit
