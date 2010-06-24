@@ -1,10 +1,24 @@
 Xcursor.theme: Vanilla-DMZ-AA
-#Xcursor.theme: Chameleon-DarkSkyBlue-Small
+!Xcursor.theme: Chameleon-DarkSkyBlue-Small
 
-yeahconsole*term:urxvtc -pe tabbed
-yeahconsole*toggleKey:None+F12
-yeahconsole*consoleHeight:49
-#yeahconsole*aniDelay:13
+*background: rgb:1a/1a/1a
+*foreground: rgb:aa/aa/aa
+*color0:     rgb:00/00/00
+*color8:     rgb:66/66/66
+*color1:     rgb:9e/18/28
+*color9:     rgb:bc/57/66
+*color2:     rgb:00/88/00
+*color10:    rgb:61/a1/71
+*color3:     rgb:d2/bb/4b
+*color11:    rgb:e7/db/52
+*color4:     rgb:41/41/71
+*color12:    rgb:50/85/af
+*color5:     rgb:96/3c/59
+*color13:    rgb:a9/7a/99
+*color6:     rgb:41/81/79
+*color14:    rgb:6b/a4/a4
+*color7:     rgb:be/be/be
+*color15:    rgb:ff/ff/ff
 
 URxvt*transparent: true
 URxvt*tintColor: Black
@@ -17,10 +31,10 @@ URxvt.tabbed.tabbar-bg: 0
 URxvt.tabbed.tab-fg:    0
 URxvt.tabbed.tab-bg:    2
 URxvt*font: xft:Terminus:pixelsize=17
-#DejaVu Sans Mono,Droid Sans Mono,Inconsolata,Luxi Mono
+!DejaVu Sans Mono,Droid Sans Mono,Inconsolata,Luxi Mono
 URxvt*font: xft:Droid Sans Mono:pixelsize=13
 
-# Replace blue folder colors with a lighter shade for clarity
+! Replace blue folder colors with a lighter shade for clarity
 URxvt*color4: RoyalBlue
 URxvt*color12: RoyalBlue
 
@@ -30,7 +44,7 @@ URxvt.scrollstyle: plain
 URxvt*scrollTtyOutput: False
 URxvt*scrollWithBuffer: True
 
-#URxvt*jumpScroll: False
+!URxvt*jumpScroll: False
 URxvt*skipScroll: False
 URxvt.perl-ext: default,matcher,tabbed
 URxvt.urlLauncher: opera
