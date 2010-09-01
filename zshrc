@@ -80,7 +80,7 @@ alias imgpost="uimge -i --usr=#url#"
 
 
 # Alias functions
-youmplayer () { mplayer `youtube-dl -gb $1` }
+youmplayer () { mplayer `youtube-dl -g $1` }
 
 
 # prompt
