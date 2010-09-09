@@ -82,6 +82,10 @@ alias imgpost="uimge -i --usr=#url#"
 # Alias functions
 youmplayer () { mplayer `youtube-dl -g $1` }
 
+urlix () {
+    $BROWSER `eix -e $1 --format '<homepage>'`
+}
+compdef _eix urlix
 
 # prompt
 autoload -U promptinit
