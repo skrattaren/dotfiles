@@ -83,7 +83,9 @@ alias imgpost="uimge -i --usr=#url#"
 youmplayer () { mplayer `youtube-dl -g $1` }
 
 urlix () {
-    $BROWSER `eix -e $1 --format '<homepage>'`
+    for url in `eix -e $1 --format '<homepage>'`; do
+        $BROWSER "$url" > /dev/null;
+    done
 }
 compdef _eix urlix
 
