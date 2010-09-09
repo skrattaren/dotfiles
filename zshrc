@@ -88,6 +88,8 @@ autoload -U promptinit
 promptinit
 prompt gentoo
 
+# Zmv!
+autoload -U zmv
 # Zcalc!
 autoload -U zcalc
 
