@@ -87,7 +87,7 @@ urlix () {
         $BROWSER "$url" > /dev/null;
     done
 }
-compdef _eix urlix
+compdef "_gentoo_packages available" urlix
 
 # prompt
 autoload -U promptinit
