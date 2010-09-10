@@ -79,15 +79,24 @@ alias pygbb="pygmentize -f bbcode"
 alias imgpost="uimge -i --usr=#url#"
 
 
-# Alias functions
+## Shell functions
+# Watch YouTube video with Mplayer
 youmplayer () { mplayer `youtube-dl -g $1` }
 
+# Open package homepage
 urlix () {
     for url in `eix -e $1 --format '<homepage>'`; do
         $BROWSER "$url" > /dev/null;
     done
 }
 compdef "_gentoo_packages available" urlix
+
+# Open package's ebuild in editor
+ebldopen () {
+     $EDITOR `equery which $1`
+}
+compdef "_gentoo_packages available" ebldopen
+
 
 # prompt
 autoload -U promptinit
