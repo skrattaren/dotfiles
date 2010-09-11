@@ -89,14 +89,18 @@ urlix () {
         $BROWSER "$url" > /dev/null;
     done
 }
-compdef "_gentoo_packages available" urlix
 
 # Open package's ebuild in editor
 ebldopen () {
      $EDITOR `equery which $1`
 }
-compdef "_gentoo_packages available" ebldopen
 
+# Open package changelog
+ebldlog () {
+     $EDITOR $(dirname `equery which $1`)/ChangeLog
+}
+
+compdef "_gentoo_packages available" urlix ebldopen ebldlog
 
 # prompt
 autoload -U promptinit
