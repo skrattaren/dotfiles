@@ -3,6 +3,7 @@ filetype indent on
 
 set expandtab shiftwidth=4 softtabstop=4
 set incsearch ignorecase hlsearch
+set modeline nowrap
 
 " Press space to clear search highlighting and any message already displayed.
 nnoremap <silent> <Space> :silent noh<Bar>echo<CR>
