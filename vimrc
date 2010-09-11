@@ -12,4 +12,5 @@ nnoremap <silent> <Space> :silent noh<Bar>echo<CR>
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 set showmode
+set invpaste paste
 
