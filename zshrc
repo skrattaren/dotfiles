@@ -105,7 +105,55 @@ compdef "_gentoo_packages available" urlix ebldopen ebldlog
 # prompt
 autoload -U promptinit
 promptinit
-prompt gentoo
+
+# gentoovcs prompt theme
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' enable git svn hg
+
+prompt_gentoovcs_help () {
+  cat <<'EOF'
+Standard Gentoo prompt theme with VCS info. Like original, it's color-scheme-able:
+
+  prompt gentoovcs [<promptcolour> [<usercolour> [<rootcolour> [<vcsinfocolour>]]]]
+
+EOF
+
+}
+
+prompt_gentoovcs_setup () {
+  prompt_gentoo_prompt=${1:-'blue'}
+  prompt_gentoo_user=${2:-'green'}
+  prompt_gentoo_root=${3:-'red'}
+  prompt_gentoo_vcs=${4:-'white'}
+
+  if [ "$USER" = 'root' ]
+  then
+    base_prompt="%B%F{$prompt_gentoo_root}%m%k "
+  else
+    base_prompt="%B%F{$prompt_gentoo_user}%n@%m%k "
+  fi
+  post_prompt="%b%f%k"
+
+  p_vcs="%(v.%U%v%u.)"
+  p_vcs="%F{$prompt_gentoo_vcs}$p_vcs%f%1(V. .)"
+
+  path_prompt="%B%F{$prompt_gentoo_prompt}%1~"
+  PS1="$base_prompt$p_vcs$path_prompt %# $post_prompt"
+  PS2="$base_prompt$path_prompt %_> $post_prompt"
+  PS3="$base_prompt$path_prompt ?# $post_prompt"
+
+  add-zsh-hook precmd prompt_gentoovcs_precmd
+}
+
+prompt_gentoovcs_precmd () {
+  psvar=()
+  vcs_info
+  [[ -n $vcs_info_msg_0_ ]] && psvar[1]="$vcs_info_msg_0_"
+  psvar[1]=${psvar[1]/ /}
+  psvar[1]=${psvar[1]/\]-/]}
+}
+
+prompt_gentoovcs_setup "$@"
 
 # Zmv!
 autoload -U zmv
