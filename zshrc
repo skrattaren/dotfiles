@@ -102,6 +102,23 @@ ebldlog () {
 
 compdef "_gentoo_packages available" urlix ebldopen ebldlog
 
+# Set LCD brightness (root access required, obviously)
+bright () {
+  BRIGHTFILE="/sys/devices/virtual/backlight/acpi_video0/brightness"
+  if [[ -n $1 ]] then
+    echo $1 > $BRIGHTFILE;
+    return 0;
+  fi
+  local list
+  list=("1" "5")
+  bright=`cat $BRIGHTFILE`
+  if [[ $bright != $list[1] ]] then
+    echo $list[1] > $BRIGHTFILE
+  else
+    echo $list[2] > $BRIGHTFILE
+  fi
+}
+
 # prompt
 autoload -U promptinit
 promptinit
