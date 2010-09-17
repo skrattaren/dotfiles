@@ -102,6 +102,9 @@ ebldlog () {
 
 compdef "_gentoo_packages available" urlix ebldopen ebldlog
 
+# Auto-completion from `cmd --help`
+compdef _gnu_generic feh
+
 # Set LCD brightness (root access required, obviously)
 bright () {
   BRIGHTFILE="/sys/devices/virtual/backlight/acpi_video0/brightness"
