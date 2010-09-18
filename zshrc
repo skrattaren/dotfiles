@@ -129,6 +129,8 @@ promptinit
 # gentoovcs prompt theme
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git svn hg
+zstyle ':vcs_info:*' formats '[%s:%b] '
+setopt PROMPT_SUBST
 
 prompt_gentoovcs_help () {
   cat <<'EOF'
@@ -154,23 +156,12 @@ prompt_gentoovcs_setup () {
   fi
   post_prompt="%b%f%k"
 
-  p_vcs="%(v.%U%v%u.)"
-  p_vcs="%F{$prompt_gentoo_vcs}$p_vcs%f%1(V. .)"
-
   path_prompt="%B%F{$prompt_gentoo_prompt}%1~"
-  PS1="$base_prompt$p_vcs$path_prompt %# $post_prompt"
+  PS1="$base_prompt"'%B%F{$prompt_gentoo_vcs}$vcs_info_msg_0_'"$path_prompt %# $post_prompt"
   PS2="$base_prompt$path_prompt %_> $post_prompt"
   PS3="$base_prompt$path_prompt ?# $post_prompt"
 
-  add-zsh-hook precmd prompt_gentoovcs_precmd
-}
-
-prompt_gentoovcs_precmd () {
-  psvar=()
-  vcs_info
-  [[ -n $vcs_info_msg_0_ ]] && psvar[1]="$vcs_info_msg_0_"
-  psvar[1]=${psvar[1]/ /}
-  psvar[1]=${psvar[1]/\]-/]}
+  add-zsh-hook precmd vcs_info
 }
 
 prompt_gentoovcs_setup "$@"
