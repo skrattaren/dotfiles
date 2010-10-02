@@ -78,6 +78,8 @@ alias amd64='ACCEPT_KEYWORDS="~amd64" emerge -pv'
 alias pygbb="pygmentize -f bbcode"
 alias imgpost="uimge -i --usr=#url#"
 
+alias tmux="tmux -u attach || tmux -u"
+alias wget="wget --continue"
 
 ## Shell functions
 # Watch YouTube video with Mplayer
