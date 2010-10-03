@@ -141,7 +141,8 @@ promptinit
 # gentoovcs prompt theme
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git svn hg
-zstyle ':vcs_info:*' formats '[%s:%b] '
+zstyle ':vcs_info:git:*' formats '[±:%b] '
+zstyle ':vcs_info:hg:*' formats '[☿:%b] '
 setopt PROMPT_SUBST
 
 prompt_gentoovcs_help () {
