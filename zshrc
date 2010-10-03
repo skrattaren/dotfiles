@@ -72,14 +72,10 @@ alias rmf='nocorrect rm -f'
 alias rmrf='nocorrect rm -fR'
 alias mkdir='nocorrect mkdir'
 
-alias esync='layman -S && eix-sync -C --quiet'
-alias amd64='ACCEPT_KEYWORDS="~amd64" emerge -pv'
-
-alias pygbb="pygmentize -f bbcode"
-alias imgpost="uimge -i --usr=#url#"
-
+# Convenient ones
 alias tmux="tmux -u attach || tmux -u"
 alias wget="wget --continue"
+alias vim="vim -p"
 
 ## Shell functions
 # Watch YouTube video with Mplayer
