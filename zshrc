@@ -137,8 +137,8 @@ promptinit
 # gentoovcs prompt theme
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git svn hg
-zstyle ':vcs_info:git:*' formats '[±:%b] '
-zstyle ':vcs_info:hg:*' formats '[☿:%b] '
+zstyle ':vcs_info:git:*' formats '[±:%b]'
+zstyle ':vcs_info:hg:*' formats '[☿:%b]'
 setopt PROMPT_SUBST
 
 prompt_gentoovcs_help () {
@@ -166,7 +166,7 @@ prompt_gentoovcs_setup () {
   post_prompt="%b%f%k"
 
   path_prompt="%B%F{$prompt_gentoo_prompt}%1~"
-  PS1="$base_prompt"'%B%F{$prompt_gentoo_vcs}$vcs_info_msg_0_'"$path_prompt %# $post_prompt"
+  PS1="$base_prompt"'%B%F{$prompt_gentoo_vcs}${vcs_info_msg_0_:+${vcs_info_msg_0_} }'"$path_prompt %# $post_prompt"
   PS2="$base_prompt$path_prompt %_> $post_prompt"
   PS3="$base_prompt$path_prompt ?# $post_prompt"
 
