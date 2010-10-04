@@ -22,7 +22,7 @@ Xcursor.theme: Vanilla-DMZ-AA
 
 URxvt*transparent: true
 URxvt*tintColor: Black
-URxvt*shading: 17
+URxvt*shading: 30
 URxvt*saveLines:13000
 URxvt*foreground: White
 URxvt*background: Black
@@ -32,11 +32,7 @@ URxvt.tabbed.tab-fg:    0
 URxvt.tabbed.tab-bg:    2
 URxvt*font: xft:Terminus:pixelsize=17
 !DejaVu Sans Mono,Droid Sans Mono,Inconsolata,Luxi Mono
-URxvt*font: xft:Droid Sans Mono:pixelsize=13
-
-! Replace blue folder colors with a lighter shade for clarity
-URxvt*color4: RoyalBlue
-URxvt*color12: RoyalBlue
+URxvt*font: xft:Dejavu Sans Mono:pixelsize=13
 
 URxvt*scrollBar: true
 URxvt*scrollBar_right: true
