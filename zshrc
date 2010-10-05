@@ -93,7 +93,7 @@ udiff() {
 
 # Open package homepage
 urlix () {
-    for url in `eix -e $1 --format '<homepage>'`; do
+    for url in `eix -e --pure-packages $1 --format '<homepage>'`; do
         $BROWSER "$url" > /dev/null;
     done
 }
