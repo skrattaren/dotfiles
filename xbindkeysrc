@@ -1,3 +1,6 @@
+"xlock -mode blank"
+  Mod4 + s
+
 "opera"
   Mod4 + o
 
