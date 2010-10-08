@@ -1,6 +1,13 @@
 # Sourcing so sourcing
 source /etc/zsh/zprofile
 
+#Set LS_COLORS
+if [[ -f ~/.dir_colors ]]; then
+        eval `dircolors -b ~/.dir_colors`
+else
+        eval `dircolors -b /etc/DIR_COLORS`
+fi
+
 # History settings
 HISTFILE=~/.histfile
 HISTSIZE=3000
@@ -180,16 +187,12 @@ autoload -U zmv
 # Zcalc!
 autoload -U zcalc
 
-#zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
-#zstyle ':completion:*:warnings' format '%BSorry, no matches for: %d%b'
-
 # Cache completion
 zstyle ':completion::complete:*' use-cache 1
 
 # List completions
 zmodload zsh/complist
-#zstyle ':completion'
-#zstyle ':completion:*' menu yes select
+zstyle ':completion:*' menu select
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 # Kill processes with completion
