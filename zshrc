@@ -81,7 +81,7 @@ alias mkdir='nocorrect mkdir'
 
 # Convenient ones
 alias tmux="tmux -u attach || tmux -u"
-alias wget="wget --continue"
+alias wget="wget --continue --content-disposition"
 alias vim="vim -p"
 
 ## Shell functions
