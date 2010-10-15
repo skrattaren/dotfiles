@@ -180,7 +180,11 @@ prompt_gentoovcs_setup () {
   add-zsh-hook precmd vcs_info
 }
 
-prompt_gentoovcs_setup "$@"
+if [[ $TERM == "screen" ]] then
+  prompt clint
+else
+  prompt_gentoovcs_setup "$@"
+fi
 
 # Zmv!
 autoload -U zmv
