@@ -137,6 +137,11 @@ bright () {
   fi
 }
 
+# Rubyless omploading
+ompload() {
+         curl -F file1=@"$1" http://ompldr.org/upload|awk '/Info:|File:|Thumbnail:|BBCode:/{gsub(/<[^<]*?\/?>/,"");$1=$1;sub(/^/,"\033[0;    34m");sub(/:/,"\033[0m: ");print}'
+          }
+
 # prompt
 autoload -U promptinit
 promptinit
