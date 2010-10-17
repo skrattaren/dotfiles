@@ -9,9 +9,13 @@ set listchars=tab:▹\ ,eol:↵,trail:▿
 nmap <leader>l :set list!<CR>
 
 set incsearch hlsearch smartcase
+set gdefault
+set showmatch
+
 set modeline nowrap
 set relativenumber
 set cursorline showmode showcmd ruler
+set colorcolumn=83
 set ttyfast
 set wildmenu
 
