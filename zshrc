@@ -64,9 +64,6 @@ bindkey "^[r"   redo
 
 bindkey "^R"	history-incremental-search-backward
 
-EDITOR="vim"
-XTERM="urxvtc -pe tabbed"
-
 alias ls='ls -h --color=auto --group-directories-first'
 alias flash='mount /mnt/flash'
 alias df='df -m'
