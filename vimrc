@@ -6,7 +6,7 @@ set paste
 set expandtab shiftwidth=4 softtabstop=4 tabstop=4
 set list
 set listchars=tab:▹\ ,eol:↵,trail:▿
-nmap <leader>l :set list!<CR>
+nmap <leader>l :set list! relativenumber!<CR>
 
 set incsearch hlsearch smartcase
 set gdefault
@@ -27,5 +27,9 @@ nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 set invpaste
 
+set t_Co=16
 colorscheme ir_black
+
+nnoremap <C-PageDown> :tabNext<CR>
+nnoremap <C-PageUp> :tabPrev<CR>
 
