@@ -83,6 +83,7 @@ alias mkdir='nocorrect mkdir'
 alias tmux="tmux -u attach || tmux -u"
 alias wget="wget --continue --content-disposition"
 alias vim="vim -p"
+alias grep="grep --colour"
 
 ## Shell functions
 # Watch YouTube video with Mplayer
