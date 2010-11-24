@@ -1,8 +1,3 @@
-# -*- coding: utf-8 -*-
-#
-# .XCompose
-#
-# $Id: .XCompose,v 1.31 2008/09/18 17:57:14 deskpot Exp $
 include "/usr/share/X11/locale/en_US.UTF-8/Compose"
 
 <Multi_key> <Cyrillic_io>: "́"
