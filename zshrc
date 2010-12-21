@@ -140,8 +140,13 @@ bright () {
 
 # Rubyless omploading
 ompload() {
-         curl -F file1=@"$1" http://ompldr.org/upload|awk '/Info:|File:|Thumbnail:|BBCode:/{gsub(/<[^<]*?\/?>/,"");$1=$1;sub(/^/,"\033[0;    34m");sub(/:/,"\033[0m: ");print}'
-          }
+    curl -F file1=@"$1" http://ompldr.org/upload|awk '/Info:|File:|Thumbnail:|BBCode:/{gsub(/<[^<]*?\/?>/,"");$1=$1;sub(/^/,"\033[0;    34m");sub(/:/,"\033[0m: ");print}'
+}
+
+# Notify at
+notify_at() {
+    echo sw-notify-send "$2" "$3" | at "$1"
+}
 
 # prompt
 autoload -U promptinit
