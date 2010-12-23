@@ -176,16 +176,19 @@ prompt_gentoovcs_setup () {
   prompt_gentoo_vcs=${4:-'white'}
   prompt_gentoo_job=${5:-'magenta'}
 
+  jobs="%F{$prompt_gentoo_job}%(1j. [%j] .)%f"
+
   if [ "$USER" = 'root' ]
   then
     base_prompt="%B%F{$prompt_gentoo_root}%m%k "
   else
-    base_prompt="%B%F{$prompt_gentoo_job}%(1j. [%j] .)%f%F{$prompt_gentoo_user}%n@%m%k "
+    base_prompt="%B%F{$prompt_gentoo_user}%n@%m%k "
   fi
+  path_prompt="%B%F{$prompt_gentoo_prompt}%1~"
+  vcs_prompt='%B%F{$prompt_gentoo_vcs}${vcs_info_msg_0_:+${vcs_info_msg_0_} }'
   post_prompt="%b%f%k"
 
-  path_prompt="%B%F{$prompt_gentoo_prompt}%1~"
-  PS1="$base_prompt"'%B%F{$prompt_gentoo_vcs}${vcs_info_msg_0_:+${vcs_info_msg_0_} }'"$path_prompt %(0?.%#.%S%#%s) $post_prompt"
+  PS1="${jobs}${base_prompt}${vcs_prompt}${path_prompt} %(0?.%#.%S%#%s) $post_prompt"
   PS2="$base_prompt$path_prompt %_> $post_prompt"
   PS3="$base_prompt$path_prompt ?# $post_prompt"
 
