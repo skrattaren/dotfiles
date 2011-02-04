@@ -1,12 +1,6 @@
 "xlock -mode blank"
   Mod4 + s
 
-"opera"
-  Mod4 + o
-
-"psi"
-  Mod4 + p
-
 "mpc toggle"
   XF86AudioPlay
 
