@@ -89,7 +89,7 @@ youmplayer () { mplayer `youtube-dl -g $1` }
 # Coloured and lessed diff
 udiff() {
         difflength=`diff -u $1 $2 | wc -l`
-        cmd="diff -u $1 $2 | pygmentize-3.1 -g"
+        cmd="diff -u $1 $2 | pygmentize -g"
         if [[ LINES -lt difflength ]] then
             cmd="${cmd} | less"
         fi
