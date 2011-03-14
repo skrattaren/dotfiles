@@ -96,6 +96,11 @@ udiff() {
         eval $cmd
 }
 
+# Grep current kernel config for options
+krngrep() {
+    zgrep --colour $1 /proc/config.gz
+}
+
 # Open package homepage
 urlix () {
     for url in `eix -e --pure-packages $1 --format '<homepage>'`; do
