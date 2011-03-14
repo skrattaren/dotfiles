@@ -80,7 +80,7 @@ alias tmux="tmux -u attach || tmux -u"
 alias wget="wget --continue --content-disposition"
 alias vim="vim -p"
 alias grep="grep --colour"
-alias feh="feh --auto-zoom --fullscreen"
+alias feh="feh --fullscreen --scale-down"
 
 ## Shell functions
 # Watch YouTube video with Mplayer
