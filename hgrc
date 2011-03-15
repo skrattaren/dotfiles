@@ -1,0 +1,28 @@
+[extensions]
+autopager=
+color =
+convert =
+fetch =
+graphlog =
+highlight=
+inotify=
+mq=
+progress=
+purge =
+rebase =
+relink =
+transplant =
+
+[ui]
+username = Nickolaj Stjujsckij <sterkrig@home.no>
+merge = internal:merge
+
+[diff]
+git = True
+
+[alias]
+drop = revert --no-backup
+
+[autopager]
+attend = annotate, diff, glog, help, log, tip
+
