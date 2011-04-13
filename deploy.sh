@@ -6,7 +6,7 @@
 
 RDIR=$(dirname `readlink -fn $0`)
 
-excludes="deploy.sh green_kde.colors ir_black_cscheme.vim"
+excludes="deploy.sh ir_black_cscheme.vim"
 
 function include() {
     for i in ${excludes[@]}; do
@@ -35,8 +35,6 @@ function symlinkit() {
 }
 
 if [[ $EUID -ne 0 ]]; then
-    symlinkit "$RDIR/green_kde.colors" \
-        "$HOME/.kde4/share/apps/color-schemes/green_kde.colors"
     FILES=$(ls "$RDIR")
 else
     FILES="vimrc zshrc"
