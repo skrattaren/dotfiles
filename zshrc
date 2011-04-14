@@ -93,9 +93,7 @@ udiff() {
 }
 
 # Grep current kernel config for options
-krngrep() {
-    zgrep --colour $1 /proc/config.gz
-}
+krngrep() { zgrep --colour $1 /proc/config.gz }
 
 # Open package homepage
 urlix () {
@@ -105,14 +103,10 @@ urlix () {
 }
 
 # Open package's ebuild in editor
-ebldopen () {
-     $EDITOR `equery which $1`
-}
+ebldopen () { $EDITOR `equery which $1` }
 
 # Open package changelog
-ebldlog () {
-     $EDITOR $(dirname `equery which $1`)/ChangeLog
-}
+ebldlog () { $EDITOR $(dirname `equery which $1`)/ChangeLog }
 
 compdef "_gentoo_packages available" urlix ebldopen ebldlog
 
@@ -145,9 +139,7 @@ ompload() {
 }
 
 # Notify at
-notify_at() {
-    echo sw-notify-send "$2" "$3" | at "$1"
-}
+notify_at() { echo sw-notify-send "$2" "$3" | at "$1" }
 
 # prompt
 autoload -U promptinit
