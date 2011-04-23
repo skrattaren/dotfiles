@@ -116,23 +116,6 @@ compdef _gnu_generic feh
 # Complete pumount like umount
 compdef _mount pumount
 
-# Set LCD brightness (root access required, obviously)
-bright () {
-  BRIGHTFILE="/sys/devices/virtual/backlight/acpi_video0/brightness"
-  if [[ -n $1 ]] then
-    echo $1 > $BRIGHTFILE;
-    return 0;
-  fi
-  local list
-  list=("1" "5")
-  bright=`cat $BRIGHTFILE`
-  if [[ $bright != $list[1] ]] then
-    echo $list[1] > $BRIGHTFILE
-  else
-    echo $list[2] > $BRIGHTFILE
-  fi
-}
-
 # Rubyless omploading
 ompload() {
     curl -F file1=@"$1" http://ompldr.org/upload|awk '/Info:|File:|Thumbnail:|BBCode:/{gsub(/<[^<]*?\/?>/,"");$1=$1;sub(/^/,"\033[0;    34m");sub(/:/,"\033[0m: ");print}'
