@@ -130,11 +130,11 @@ lnspkg () {
             echo "$LCLPORT/$cat/$1 already exists" >&2
             return 1
         fi
-        echo "Creating symlink: $LCLPORT/$cat/$1 -> $pkgs"
-        ln -s "$pkgs" "$LCLPORT/$cat/$1"
+        echo "Creating symlink: $LCLPORT/$cat/$1 -> $pkg"
+        ln -s "$pkg" "$LCLPORT/$cat/$1"
     else
-        echo "Multiple results for \"$pkg\" in $LMNDIR:" >&2
-        echo "$pkgs" >&2
+        echo "Multiple results for \"$1\" in $LMNDIR:" >&2
+        echo "$pkg" >&2
         return 1
     fi
 }
