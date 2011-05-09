@@ -110,6 +110,35 @@ ebldlog () { $EDITOR $(dirname `equery which $1`)/ChangeLog }
 
 compdef "_gentoo_packages available" urlix ebldopen ebldlog
 
+# Find and symlink package from overlay
+lnspkg () {
+    local pkg len LCLPORT LMNDIR
+    LMNDIR="/var/lib/layman"
+    LCLPORT="/usr/local/portage"
+    pkg=($LMNDIR/*/*/$1(N))
+    len=${#pkgs}
+    if [ "$len" -eq 0 ]; then
+        echo "No package \"$pkg\" found in $LMNDIR" >&2
+        return 1
+    fi
+    if [ "$len" -eq 1 ]; then
+        pkgpath=(${(s:/:)pkgs})
+        cat=$pkgpath[5]
+        echo "Creating $LCLPORT/$cat..."
+        mkdir -p "$LCLPORT/$cat"
+        if [ -x "$LCLPORT/$cat/$1" ]; then
+            echo "$LCLPORT/$cat/$1 already exists" >&2
+            return 1
+        fi
+        echo "Creating symlink: $LCLPORT/$cat/$1 -> $pkgs"
+        ln -s "$pkgs" "$LCLPORT/$cat/$1"
+    else
+        echo "Multiple results for \"$pkg\" in $LMNDIR:" >&2
+        echo "$pkgs" >&2
+        return 1
+    fi
+}
+
 # Auto-completion from `cmd --help`
 compdef _gnu_generic feh
 
