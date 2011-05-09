@@ -116,13 +116,13 @@ lnspkg () {
     LMNDIR="/var/lib/layman"
     LCLPORT="/usr/local/portage"
     pkg=($LMNDIR/*/*/$1(N))
-    len=${#pkgs}
+    len=${#pkg}
     if [ "$len" -eq 0 ]; then
-        echo "No package \"$pkg\" found in $LMNDIR" >&2
+        echo "No package \"$1\" found in $LMNDIR" >&2
         return 1
     fi
     if [ "$len" -eq 1 ]; then
-        pkgpath=(${(s:/:)pkgs})
+        pkgpath=(${(s:/:)pkg})
         cat=$pkgpath[5]
         echo "Creating $LCLPORT/$cat..."
         mkdir -p "$LCLPORT/$cat"
