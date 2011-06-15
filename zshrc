@@ -139,6 +139,16 @@ lnspkg () {
     fi
 }
 
+toggle_history() {
+    if [[ -o "inc_append_history" ]]; then
+        unsetopt inc_append_history extended_history share_history
+        echo "History off"
+    else
+        setopt inc_append_history extended_history share_history
+        echo "History on"
+    fi
+}
+
 # Auto-completion from `cmd --help`
 compdef _gnu_generic feh
 
