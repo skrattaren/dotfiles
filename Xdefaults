@@ -43,7 +43,7 @@ URxvt*scrollWithBuffer: true
 
 !URxvt*jumpScroll: false
 URxvt*skipScroll: false
-URxvt.perl-ext: default,matcher,tabbed
+URxvt.perl-ext: default,matcher,tabbed,searchable-scrollback
 URxvt.urlLauncher: opera
 URxvt.matcher.button: 1
 
