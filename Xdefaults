@@ -43,8 +43,9 @@ URxvt*scrollWithBuffer: true
 
 !URxvt*jumpScroll: false
 URxvt*skipScroll: false
-URxvt.perl-ext: default,matcher,tabbed,searchable-scrollback
+URxvt.perl-ext: default,matcher,tabbed
 URxvt.urlLauncher: opera
 URxvt.matcher.button: 1
+URxvt.searchable-scrollback: C-f
 
 Xft.dpi: 120.0
