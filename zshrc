@@ -146,11 +146,11 @@ lnspkg () {
 }
 
 toggle_history() {
-    if [[ -o "inc_append_history" ]]; then
-        unsetopt inc_append_history extended_history share_history
+    if [[ -n $HISTFILE ]]; then
+        unset HISTFILE
         echo "History off"
     else
-        setopt inc_append_history extended_history share_history
+        HISTFILE=~/.histfile
         echo "History on"
     fi
 }
