@@ -78,6 +78,12 @@ alias vim="vim -p"
 alias grep="grep --colour"
 alias feh="feh --fullscreen --scale-down --sort filename"
 
+# alias for eix'ing in in separate cache for remotes
+alias eixr='eix --cache-file /var/cache/eix.remote'
+# (update eix-remote cache via cron)
+# @daily /bin/bash -c "EIX_CACHEFILE="/var/cache/eix.remote" eix-remote update"
+
+
 ## Shell functions
 # Watch YouTube video with Mplayer
 youmplayer () { mplayer `youtube-dl -g $1` }
