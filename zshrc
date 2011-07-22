@@ -77,6 +77,8 @@ alias wget="wget --continue --content-disposition"
 alias vim="vim -p"
 alias grep="grep --colour"
 alias feh="feh --fullscreen --scale-down --sort filename"
+alias qmv="qmv --format=do"
+alias qcp="qcp --format=do"
 
 # alias for eix'ing in in separate cache for remotes
 alias eixr='eix --cache-file /var/cache/eix.remote'
