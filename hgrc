@@ -15,7 +15,7 @@ relink =
 transplant =
 
 [ui]
-username = Nickolaj Stjujsckij <sterkrig@home.no>
+username = Nikolaj Sjujskij <sterkrig@home.no>
 merge = internal:merge
 
 [diff]
