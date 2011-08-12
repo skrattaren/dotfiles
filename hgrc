@@ -1,5 +1,4 @@
 [extensions]
-autopager=
 color =
 convert =
 fetch =
@@ -7,6 +6,7 @@ graphlog =
 highlight=
 inotify=
 mq=
+pager=
 progress=
 purge =
 rebase =
@@ -24,6 +24,7 @@ git = True
 [alias]
 drop = revert --no-backup
 
-[autopager]
+[pager]
 attend = annotate, diff, glog, help, log, tip
+pager = less -FRX
 
