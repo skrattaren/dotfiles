@@ -30,6 +30,3 @@ set invpaste
 set t_Co=16
 colorscheme ir_black
 
-nnoremap <C-PageDown> :tabNext<CR>
-nnoremap <C-PageUp> :tabPrev<CR>
-
