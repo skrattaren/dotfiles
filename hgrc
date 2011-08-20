@@ -25,6 +25,6 @@ git = True
 drop = revert --no-backup
 
 [pager]
-attend = annotate, diff, glog, help, log, tip
+attend = annotate, diff, glog, help, log, qdiff, tip
 pager = less -FRX
 
