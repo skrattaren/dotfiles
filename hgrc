@@ -7,6 +7,7 @@ highlight=
 inotify=
 mq=
 pager=
+patchbomb=
 progress=
 purge =
 rebase =
@@ -17,6 +18,16 @@ transplant =
 [ui]
 username = Nikolaj Sjujskij <sterkrig@myopera.com>
 merge = internal:merge
+
+[email]
+method = smtp
+from = Nikolaj Sjujskij <sterkrig@myopera.com>
+
+[smtp]
+host = smtp.myopera.com
+tls = starttls
+username = sterkrig@myopera.com
+port = 587
 
 [diff]
 git = True
