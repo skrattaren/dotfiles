@@ -18,6 +18,7 @@ transplant =
 [ui]
 username = Nikolaj Sjujskij <sterkrig@myopera.com>
 merge = internal:merge
+ignore = ~/.hgignore
 
 [email]
 method = smtp
