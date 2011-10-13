@@ -27,6 +27,14 @@ nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 set invpaste
 
-set t_Co=16
-colorscheme ir_black
+set background=dark
+if has('gui_running')
+    set guioptions=a
+    colorscheme solarized
+    set guifont=Terminus\ 11
+else
+    set t_Co=16
+    colorscheme ir_black
+endif
+
 
