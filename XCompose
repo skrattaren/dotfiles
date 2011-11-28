@@ -50,6 +50,7 @@ include "/usr/share/X11/locale/en_US.UTF-8/Compose"
 <Multi_key> <plus> <minus>       : "±"   plusminus    # PLUS-MINUS SIGN
 <Multi_key> <equal> <asciitilde> : "≈" U2248 # ALMOST EQUAL TO
 <Multi_key> <asciitilde> <equal> : "≈" U2248 # ALMOST EQUAL TO
+<Multi_key> <E> <E> : "Ǝ"
 
 
 #
