@@ -260,3 +260,4 @@ return 1
 # Load forced rehash
 zstyle ':completion:*' completer _oldlist _expand _force_rehash _complete
 
+add-zsh-hook precmd (){ echo -ne '\a' }
