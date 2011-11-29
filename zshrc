@@ -83,7 +83,8 @@ alias qcp="qcp --format=do"
 # alias for eix'ing in in separate cache for remotes
 alias eixr='eix --cache-file /var/cache/eix.remote'
 # (update eix-remote cache via cron)
-# @daily /bin/bash -c "EIX_CACHEFILE="/var/cache/eix.remote" eix-remote update"
+# @daily /bin/bash -c "EIX_CACHEFILE="/var/cache/eix.remote" \
+#        eix-remote update &> /dev/null
 
 
 ## Shell functions
