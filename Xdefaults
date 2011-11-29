@@ -40,9 +40,10 @@ URxvt*scrollBar_right: true
 URxvt.scrollstyle: plain
 URxvt*scrollTtyOutput: false
 URxvt*scrollWithBuffer: true
-
-!URxvt*jumpScroll: false
 URxvt*skipScroll: false
+
+URxvt.urgentOnBell: True
+
 URxvt.perl-ext: default,matcher,tabbed
 URxvt.urlLauncher: opera
 URxvt.matcher.button: 1
