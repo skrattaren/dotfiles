@@ -102,7 +102,7 @@ udiff() {
 }
 
 # Grep current kernel config for options
-krngrep() { zgrep --colour $1 /proc/config.gz }
+krngrep() { zgrep --colour --ignore-case $1 /proc/config.gz }
 
 # Open package homepage
 urlix () {
