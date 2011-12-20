@@ -151,10 +151,8 @@ lnspkg () {
 toggle_history() {
     if [[ -n $HISTFILE ]]; then
         unset HISTFILE
-        echo "History off"
     else
         HISTFILE=~/.histfile
-        echo "History on"
     fi
 }
 
@@ -194,7 +192,8 @@ prompt_gentoovcs_help () {
   cat <<'EOF'
 Standard Gentoo prompt theme with VCS info. Like original, it's color-scheme-able:
 
-  prompt gentoovcs [<promptcolour> [<usercolour> [<rootcolour> [<vcsinfocolour>]]]]
+  prompt gentoovcs [<promptcolour> [<usercolour> [<rootcolour> [<vcsinfocolour>] \
+      [<jobnumcolor> [<histmarkcolour>]]]]]
 
 EOF
 
@@ -206,6 +205,7 @@ prompt_gentoovcs_setup () {
   prompt_gentoo_root=${3:-'red'}
   prompt_gentoo_vcs=${4:-'white'}
   prompt_gentoo_job=${5:-'magenta'}
+  prompt_gentoo_histoff=${6:-'white'}
 
   jobs="%F{$prompt_gentoo_job}%(1j. [%j] .)%f"
 
@@ -215,6 +215,9 @@ prompt_gentoovcs_setup () {
   else
     base_prompt="%B%F{$prompt_gentoo_user}%n@%m%k "
   fi
+
+  base_prompt="%S%F{$prompt_gentoo_histoff}%v%s%f${base_prompt}"
+
   path_prompt="%B%F{$prompt_gentoo_prompt}%1~"
   vcs_prompt='%B%F{$prompt_gentoo_vcs}${vcs_info_msg_0_:+${vcs_info_msg_0_} }'
   post_prompt="%b%f%k"
@@ -224,6 +227,14 @@ prompt_gentoovcs_setup () {
   PS3="$base_prompt$path_prompt ?# $post_prompt"
 
   add-zsh-hook precmd vcs_info
+  add-zsh-hook precmd (){
+    if [[ -z $HISTFILE ]]; then
+      psvar[1]=" H "
+    else
+      psvar[1]=()
+    fi
+    echo -ne '\a'
+  }
 }
 
 if [[ $TERM == "screen" ]] then
@@ -260,4 +271,3 @@ return 1
 # Load forced rehash
 zstyle ':completion:*' completer _oldlist _expand _force_rehash _complete
 
-add-zsh-hook precmd (){ echo -ne '\a' }
