@@ -106,7 +106,7 @@ krngrep() { zgrep --colour --ignore-case $1 /proc/config.gz }
 
 # Open package homepage
 urlix () {
-    for url in `eix -e --pure-packages $1 --format '<homepage>'`; do
+    for url in `eix -e --pure-packages $1 --format '<homepage> '`; do
         $BROWSER "$url" > /dev/null;
     done
 }
