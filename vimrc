@@ -25,6 +25,10 @@ set iminsert=0
 set imsearch=0
 highlight lCursor guifg=NONE guibg=Blue
 
+" Ё!
+set spelllang=ru_yo,en_us
+autocmd FileType rst setlocal spell
+
 " Press space to clear search highlighting
 nnoremap <silent> <Space> :noh<CR>
 
