@@ -19,6 +19,12 @@ set colorcolumn=83
 set ttyfast
 set wildmenu
 
+" gimme cyrillics
+set keymap=russian-jcukenwin
+set iminsert=0
+set imsearch=0
+highlight lCursor guifg=NONE guibg=Blue
+
 " Press space to clear search highlighting
 nnoremap <silent> <Space> :noh<CR>
 
