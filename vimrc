@@ -23,7 +23,7 @@ set wildmenu
 set keymap=russian-jcukenwin
 set iminsert=0
 set imsearch=0
-highlight lCursor guifg=NONE guibg=Blue
+highlight lCursor guifg=NONE guibg=Black
 
 " Ё!
 set spelllang=ru_yo,en_us
