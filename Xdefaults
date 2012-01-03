@@ -41,6 +41,7 @@ URxvt.scrollstyle: plain
 URxvt*scrollTtyOutput: false
 URxvt*scrollWithBuffer: true
 URxvt*skipScroll: false
+URxvt*secondaryWheel: true
 
 URxvt.urgentOnBell: True
 
