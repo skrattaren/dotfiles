@@ -26,7 +26,7 @@ set imsearch=0
 highlight lCursor guifg=NONE guibg=Black
 
 " Ё!
-set spelllang=ru_yo,en_us
+set spelllang=ru_yo,en_gb
 autocmd FileType rst setlocal spell
 
 " Press space to clear search highlighting
