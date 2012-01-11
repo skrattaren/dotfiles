@@ -49,3 +49,6 @@ endif
 
 set textwidth=79
 
+"open epub as zip archive
+au BufReadCmd *.epub call zip#Browse(expand("<amatch>"))
+
