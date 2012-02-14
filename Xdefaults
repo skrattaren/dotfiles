@@ -32,8 +32,6 @@ URxvt.tabbed.tabbar-bg: 0
 URxvt.tabbed.tab-fg:    0
 URxvt.tabbed.tab-bg:    2
 URxvt*font: xft:Terminus:pixelsize=17
-!DejaVu Sans Mono,Droid Sans Mono,Inconsolata,Luxi Mono
-URxvt*font: xft:Dejavu Sans Mono:pixelsize=13
 
 URxvt*scrollBar: true
 URxvt*scrollBar_right: true
