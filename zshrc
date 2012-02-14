@@ -80,6 +80,8 @@ alias feh="feh --fullscreen --scale-down --sort filename"
 alias qmv="qmv --format=do"
 alias qcp="qcp --format=do"
 
+alias dvdplay="mplayer2 dvd://1 -dvd-device"
+
 # alias for eix'ing in in separate cache for remotes
 alias eixr='eix --cache-file /var/cache/eix.remote'
 # (update eix-remote cache via cron)
