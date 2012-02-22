@@ -158,6 +158,14 @@ toggle_history() {
     fi
 }
 
+# Convert and read rST document in browser
+rstread() {
+    local htmlfile
+    htmlfile=$(tempfile --prefix=rst --suffix=.html)
+    rst2html.py $1 $htmlfile
+    $BROWSER $htmlfile
+}
+
 # Auto-completion from `cmd --help`
 compdef _gnu_generic feh
 
