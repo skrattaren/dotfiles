@@ -39,5 +39,5 @@ upull = pull --update
 
 [pager]
 attend = annotate, diff, glog, help, log, qdiff, tip
-pager = less -FRX
+pager = less --raw-control-chars --no-init --quit-if-one-screen --quit-at-eof
 
