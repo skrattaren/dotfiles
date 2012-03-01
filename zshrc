@@ -150,6 +150,18 @@ lnspkg () {
     fi
 }
 
+# Digest and compile latest non-live ebuild in ./
+digest_compile_latest() {
+    local ebuilds latest_ebuild
+    ebuilds=( ./*-^(9999).ebuild )
+    if [ ${#ebuilds} -eq 0 ]; then
+        echo "No non-live ebuilds in current dir" >&2
+        return 1
+    fi
+    latest_ebuild=$ebuilds[-1]
+    ebuild $latest_ebuild digest clean install
+}
+
 toggle_history() {
     if [[ -n $HISTFILE ]]; then
         unset HISTFILE
