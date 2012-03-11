@@ -14,7 +14,8 @@ set showmatch
 
 set modeline nowrap
 set relativenumber
-set cursorline showmode showcmd ruler
+set cursorline cursorcolumn
+set showmode showcmd ruler
 set colorcolumn=83
 set ttyfast
 set wildmenu
@@ -23,7 +24,6 @@ set wildmenu
 set keymap=russian-jcukenwin
 set iminsert=0
 set imsearch=0
-highlight lCursor guifg=NONE guibg=Black
 
 " Ё!
 set spelllang=ru_yo,en_gb
