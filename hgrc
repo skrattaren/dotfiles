@@ -35,6 +35,7 @@ git = True
 [alias]
 drop = revert --no-backup
 upull = pull --update
+tipp = tip -p
 
 [pager]
 attend = annotate, diff, glog, help, log, qdiff, tip
