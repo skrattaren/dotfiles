@@ -14,8 +14,7 @@ set showmatch
 
 set modeline nowrap
 set relativenumber
-set cursorline cursorcolumn
-set showmode showcmd ruler
+set cursorline showmode showcmd ruler
 set colorcolumn=83
 set ttyfast
 set wildmenu
@@ -42,6 +41,7 @@ if has('gui_running')
     set guioptions=a
     colorscheme solarized
     set guifont=Terminus\ 11
+    set cursorcolumn
 else
     set t_Co=16
     colorscheme ir_black
