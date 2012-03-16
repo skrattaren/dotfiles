@@ -83,9 +83,9 @@ alias qcp="qcp --format=do"
 alias dvdplay="mplayer2 dvd://1 -dvd-device"
 
 # alias for eix'ing in in separate cache for remotes
-alias eixr='eix --cache-file /var/cache/eix.remote'
+alias eixr='eix --cache-file /var/cache/eix/previous.eix'
 # (update eix-remote cache via cron)
-# @daily /bin/bash -c 'EIX_CACHEFILE="/var/cache/eix.remote" \
+# @daily /bin/bash -c 'EIX_CACHEFILE="/var/cache/eix/previous.eix" \
 #        eix-remote update &> /dev/null'
 
 
