@@ -199,16 +199,6 @@ notify_at() { echo sw-notify-send "$2" "$3" | at "$1" }
 autoload -U promptinit
 promptinit
 
-# gentoovcs prompt theme
-autoload -Uz vcs_info
-zstyle ':vcs_info:*' enable git svn hg
-zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:*' unstagedstr '%F{blue}'
-zstyle ':vcs_info:hg:*' get-revision true
-zstyle ':vcs_info:git:*' formats '[±:%u%b%f]'
-zstyle ':vcs_info:hg:*' formats '[☿:%u%b%f]'
-zstyle ':vcs_info:hg:*' actionformats '[☿:%b:%a]'
-zstyle ':vcs_info:hg:*' branchformat '%b'
 setopt PROMPT_SUBST
 
 prompt_gentoovcs_help () {
@@ -248,6 +238,17 @@ prompt_gentoovcs_setup () {
   PS1="${jobs}${base_prompt}${vcs_prompt}${path_prompt} %(0?.%#.%S%#%s) $post_prompt"
   PS2="$base_prompt$path_prompt %_> $post_prompt"
   PS3="$base_prompt$path_prompt ?# $post_prompt"
+
+  # vcs_info options
+  autoload -Uz vcs_info
+  zstyle ':vcs_info:*' enable git svn hg
+  zstyle ':vcs_info:*' check-for-changes true
+  zstyle ':vcs_info:*' unstagedstr '%F{blue}'
+  zstyle ':vcs_info:hg:*' get-revision true
+  zstyle ':vcs_info:git:*' formats '[±:%u%b%f]'
+  zstyle ':vcs_info:hg:*' formats '[☿:%u%b%f]'
+  zstyle ':vcs_info:hg:*' actionformats '[☿:%b:%a]'
+  zstyle ':vcs_info:hg:*' branchformat '%b'
 
   add-zsh-hook precmd vcs_info
   add-zsh-hook precmd (){
