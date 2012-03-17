@@ -95,12 +95,7 @@ youmplayer () { mplayer `youtube-dl -g $1` }
 
 # Coloured and lessed diff
 udiff() {
-        difflength=`diff -u $1 $2 | wc -l`
-        cmd="diff -u $1 $2 | pygmentize -g"
-        if [[ LINES -lt difflength ]] then
-            cmd="${cmd} | less"
-        fi
-        eval $cmd
+        diff -u $1 $2 | pygmentize -g | less -FRXe
 }
 
 # Grep current kernel config for options
