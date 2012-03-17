@@ -58,7 +58,7 @@ bindkey " "     magic-space
 bindkey "^[u"   undo
 bindkey "^[r"   redo
 
-bindkey "^R"	history-incremental-search-backward
+bindkey "^R"    history-incremental-search-backward
 
 alias ls='ls -h --color=auto --group-directories-first'
 alias df='df -m'
