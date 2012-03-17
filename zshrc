@@ -199,7 +199,7 @@ notify_at() { echo sw-notify-send "$2" "$3" | at "$1" }
 autoload -U promptinit
 promptinit
 
-setopt PROMPT_SUBST
+setopt prompt_subst
 
 prompt_gentoovcs_help () {
   cat <<'EOF'
@@ -288,8 +288,8 @@ zstyle '*' hosts $hosts
 
 # Force rehashing
 _force_rehash() {
-(( CURRENT == 1 )) && rehash
-return 1
+  (( CURRENT == 1 )) && rehash
+  return 1
 }
 
 # Load forced rehash
