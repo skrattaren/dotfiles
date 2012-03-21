@@ -168,9 +168,9 @@ toggle_history() {
 # Convert and read rST document in browser
 rstread() {
     local htmlfile
-    htmlfile=$(tempfile --prefix=rst --suffix=.html)
+    htmlfile="/tmp/$(basename $1).html"
     rst2html.py $1 $htmlfile
-    $BROWSER $htmlfile
+    echo file://$htmlfile
 }
 
 # Auto-completion from `cmd --help`
