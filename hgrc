@@ -16,8 +16,12 @@ relink =
 
 [ui]
 username = Nikolaj Sjujskij <sterkrig@myopera.com>
-merge = internal:merge
+merge = kdiff3
 ignore = ~/.hgignore
+
+[merge-tools]
+kdiff3.args=$base $local $other -o $output
+kdiff3.gui=True
 
 [email]
 method = smtp
