@@ -242,7 +242,7 @@ prompt_gentoovcs_setup () {
   zstyle ':vcs_info:hg:*' get-revision true
   zstyle ':vcs_info:git:*' formats '[±:%u%b%f]'
   zstyle ':vcs_info:hg:*' formats '[☿:%u%b%f]'
-  zstyle ':vcs_info:hg:*' actionformats '[☿:%b:%a]'
+  zstyle ':vcs_info:hg:*' actionformats '[☿:%u%b%f:%a]'
   zstyle ':vcs_info:hg:*' branchformat '%b'
 
   add-zsh-hook precmd vcs_info
