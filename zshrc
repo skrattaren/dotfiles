@@ -95,7 +95,7 @@ youmplayer () { mplayer `youtube-dl -g $1` }
 
 # Coloured and lessed diff
 udiff() {
-        diff -u $1 $2 | pygmentize -g | less -FRXe
+        diff -u $1 $2 | pygmentize -g -O encoding=latin1 | less -FRXe
 }
 
 # Grep current kernel config for options
