@@ -14,20 +14,29 @@ include "/usr/share/X11/locale/en_US.UTF-8/Compose"
 
 # Additional cyrillic
 #
-<Multi_key> <Cyrillic_I>	: "І" 
+<Multi_key> <Cyrillic_I>	: "І"
 <Multi_key> <Cyrillic_i>	: "і"
-<Multi_key> <Cyrillic_U>	: "Ў" 
+<Multi_key> <Cyrillic_U>	: "Ў"
 <Multi_key> <Cyrillic_u>	: "ў"
 
 <Multi_key> <Cyrillic_GHE>	: "Ґ"
 <Multi_key> <Cyrillic_ghe>	: "ґ"
-<Multi_key> <Cyrillic_E>	: "Є" 
+<Multi_key> <Cyrillic_E>	: "Є"
 <Multi_key> <Cyrillic_e>	: "є"
 <Multi_key> <Cyrillic_SHORTI>	: "Ї"
 <Multi_key> <Cyrillic_shorti>	: "ї"
 
 <Multi_key> <Cyrillic_HARDSIGN>	: "Ѣ"
 <Multi_key> <Cyrillic_hardsign>	: "ѣ"
+
+<Multi_key> <Cyrillic_ha>	: "ҕ"
+<Multi_key> <Cyrillic_HA>	: "Ҕ"
+<Multi_key> <Cyrillic_en> <Cyrillic_ghe>	: "ҥ"
+<Multi_key> <Cyrillic_EN> <Cyrillic_GHE>	: "Ҥ"
+<Multi_key> <minus> <Cyrillic_o>	: "ө"
+<Multi_key> <minus> <Cyrillic_O>	: "Ө"
+<Multi_key> <Cyrillic_en> <Cyrillic_u>	: "ү"
+<Multi_key> <Cyrillic_EN> <Cyrillic_U>	: "Ү"
 
 #
 # Dashes
