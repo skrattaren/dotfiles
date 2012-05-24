@@ -15,7 +15,7 @@ set showmatch
 set modeline nowrap
 set relativenumber
 set cursorline showmode showcmd ruler
-set colorcolumn=83
+set colorcolumn=79
 set ttyfast
 set wildmenu
 
