@@ -12,6 +12,8 @@ set incsearch hlsearch smartcase
 set gdefault
 set showmatch
 
+set nobackup noswapfile
+
 set modeline nowrap
 set relativenumber
 set cursorline showmode showcmd ruler
