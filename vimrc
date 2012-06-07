@@ -54,3 +54,6 @@ set textwidth=79
 "open epub as zip archive
 au BufReadCmd *.epub call zip#Browse(expand("<amatch>"))
 
+" beat some sense into python-mode
+let g:pymode_folding = 0
+let g:pymode_lint_ignore = "E301,E302"
