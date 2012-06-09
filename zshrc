@@ -187,6 +187,17 @@ ompload() {
     curl -F file1=@"$1" http://ompldr.org/upload|awk '/Info:|File:|Thumbnail:|BBCode:/{gsub(/<[^<]*?\/?>/,"");$1=$1;sub(/^/,"\033[0;    34m");sub(/:/,"\033[0m: ");print}'
 }
 
+# Upload to MyOpera
+# generate cookie with
+# % $ curl -Lc ~/.config/myoperacookie -d "user=$USER&passwd=$PWD&remember=1" \
+#     https://my.opera.com/community/login/index.pl > /dev/null
+mopload() {
+    curl -sLb ~/.config/myoperacookie \
+         http://my.opera.com/Sterkrig/files/addpic.pl \
+         -F file=@"${1}" -F dir="${2}" > /dev/null
+    echo "Maybe http://files.myopera.com/Sterkrig/${2:-files}/$1"
+}
+
 # Notify at
 notify_at() { echo sw-notify-send "$2" "$3" | at "$1" }
 
