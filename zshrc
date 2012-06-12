@@ -193,10 +193,12 @@ ompload() {
 # % curl -Lc ~/.config/myoperacookie -d "user=$USER&passwd=$PWD&remember=1" \
 #     https://my.opera.com/community/login/index.pl > /dev/null
 mopload() {
+    local filename encoded
+    filename=$(basename "$1")
     curl -sLb ~/.config/myoperacookie \
-         http://my.opera.com/Sterkrig/files/addpic.pl \
-         -F file=@"${1}" -F dir="${2}" > /dev/null
-    echo "Maybe http://files.myopera.com/Sterkrig/${2:-files}/$1"
+         http://upload.my.opera.com/Sterkrig/files/addpic.pl \
+         -F file=@"${1}" -F dir="${2}" | grep "$filename" | grep scanfilelink \
+            | sed 's:<a href="\(.\+\)" id="scanfilelink".\+$:\1:g'
 }
 
 # Notify at
