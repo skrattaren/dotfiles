@@ -79,6 +79,8 @@ include "/usr/share/X11/locale/en_US.UTF-8/Compose"
 <Multi_key> <0> <percent>           : "‰"   U2030        # PER MILLE SIGN
 
 <Multi_key> <c> <v> : "☭" U262D
+<Multi_key> <v> <v> : "✓" U2713
+
 
 # Arrows
 # Simple
