@@ -8,7 +8,8 @@ set list
 set listchars=tab:▹\ ,eol:↵,trail:▿
 nmap <leader>l :set list! relativenumber!<CR>
 
-set incsearch hlsearch smartcase
+set incsearch hlsearch
+set ignorecase smartcase
 set gdefault
 set showmatch
 
