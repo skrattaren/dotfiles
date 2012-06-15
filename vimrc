@@ -31,10 +31,10 @@ set imsearch=0
 set spelllang=ru_yo,en_gb
 autocmd FileType rst setlocal spell
 
-" Press space to clear search highlighting
+" press space to clear search highlighting
 nnoremap <silent> <Space> :noh<CR>
 
-" Map toggling paste mode
+" map toggling paste mode
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 set invpaste
@@ -52,7 +52,7 @@ endif
 
 set textwidth=79
 
-"open epub as zip archive
+" open epub as zip archive
 au BufReadCmd *.epub call zip#Browse(expand("<amatch>"))
 
 " beat some sense into python-mode
