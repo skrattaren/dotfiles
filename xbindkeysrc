@@ -1,6 +1,9 @@
 "xlock -mode blank"
   Mod4 + s
 
+"dmenu_run"
+  Mod4 + d
+
 "mpc toggle"
   XF86AudioPlay
 
