@@ -41,6 +41,7 @@ upull = pull --update
 tipp = tip -p
 smartrebase = rebase -b 'head() and branch(.) and draft()'
                      -d 'head() and branch(.) and public()'
+postdiff = !$HG diff $@ | lodgeit -l diff
 
 [pager]
 attend = annotate, diff, glog, help, log, qdiff, tip
