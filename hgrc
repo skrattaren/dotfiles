@@ -1,6 +1,7 @@
 [extensions]
 color =
 convert =
+extdiff =
 fetch =
 graphlog =
 highlight =
@@ -17,6 +18,10 @@ relink =
 username = Nikolaj Sjujskij <sterkrig@myopera.com>
 merge = kdiff3
 ignore = ~/.hgignore
+
+[extdiff]
+cmd.kdiff = kdiff3
+cmd.vdiff = vimdiff
 
 [merge-tools]
 kdiff3.args=$base $local $other -o $output
