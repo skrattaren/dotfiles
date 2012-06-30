@@ -190,8 +190,8 @@ ompload() {
 
 # Upload to MyOpera
 # generate cookie with
-# % curl -Lc ~/.config/myoperacookie -d "user=$USER&passwd=$PWD&remember=1" \
-#     https://my.opera.com/community/login/index.pl > /dev/null
+# % curl -sLc ~/.config/myoperacookie -d "user=$USER&passwd=$PWD&remember=1" \
+#     https://my.opera.com/community/login/index.pl -o /dev/null
 mopload() {
     local filename encoded
     filename=$(basename "$1")
