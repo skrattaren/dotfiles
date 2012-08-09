@@ -48,6 +48,7 @@ smartrebase = rebase -b 'head() and branch(.) and draft()'
                      -d 'head() and branch(.) and public()'
 postdiff = !$HG diff $@ | lodgeit -l diff
 qtip = log --rev qtip --patch
+today = log -u sterkrig -u krigstask --date ">0:00"
 
 [pager]
 attend = annotate, diff, glog, help, log, qdiff, tip
