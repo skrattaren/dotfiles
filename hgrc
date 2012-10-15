@@ -3,7 +3,6 @@ color =
 convert =
 extdiff =
 fetch =
-graphlog =
 highlight =
 mq =
 pager =
