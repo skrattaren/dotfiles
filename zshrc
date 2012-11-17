@@ -311,5 +311,10 @@ _force_rehash() {
 # Load forced rehash
 zstyle ':completion:*' completer _oldlist _expand _force_rehash _complete
 
+# Load local file
+if [[ -f ~/.zshlocal ]]; then
+  source ~/.zshlocal
+fi
+
 # vim: softtabstop=2
 
