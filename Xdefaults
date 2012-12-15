@@ -21,6 +21,7 @@ Xcursor.theme: Vanilla-DMZ-AA
 *color15:    rgb:ff/ff/ff
 
 URxvt*transparent: true
+URxvt*termName: rxvt-unicode
 URxvt*tintColor: White
 URxvt*shading: 30
 URxvt*fading: 30
