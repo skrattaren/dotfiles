@@ -116,7 +116,11 @@ urlix () {
 ebldopen () { $EDITOR `equery which $1` }
 
 # Open package changelog
-ebldlog () { $EDITOR $(dirname `equery which $1`)/ChangeLog }
+ebldlog () {
+    # I'll enforce vimpager
+    local PAGER="vimpager"
+    equery changes -f $1 | $PAGER - -c 'set ft=gentoo-changelog'
+}
 
 compdef "_gentoo_packages available" urlix ebldopen ebldlog
 
