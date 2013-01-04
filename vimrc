@@ -22,6 +22,7 @@ set cursorline showmode showcmd ruler
 set colorcolumn=79
 set ttyfast
 set wildmenu
+set hidden
 
 " gimme cyrillics
 set keymap=russian-jcukenwin
