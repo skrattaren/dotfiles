@@ -24,6 +24,7 @@ set cursorline showmode showcmd ruler
 set colorcolumn=79
 set ttyfast
 set wildmenu
+set wildignore=*.pyc
 set hidden
 set scrolloff=3
 
