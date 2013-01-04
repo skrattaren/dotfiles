@@ -15,6 +15,8 @@ set gdefault
 set showmatch
 
 set nobackup noswapfile
+set undofile
+set undodir=~/.vim/undodir
 
 set modeline nowrap
 set relativenumber
@@ -23,6 +25,7 @@ set colorcolumn=79
 set ttyfast
 set wildmenu
 set hidden
+set scrolloff=3
 
 " gimme cyrillics
 set keymap=russian-jcukenwin
