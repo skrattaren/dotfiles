@@ -2,8 +2,6 @@ filetype plugin on
 filetype indent on
 syntax on
 
-set paste
-
 set expandtab shiftwidth=4 softtabstop=4 tabstop=4
 set list
 set listchars=tab:▹\ ,eol:↵,trail:▿
@@ -43,7 +41,6 @@ nnoremap <silent> <Space> :noh<CR>
 " map toggling paste mode
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
-set invpaste
 
 set background=dark
 if has('gui_running')
