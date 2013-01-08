@@ -45,6 +45,8 @@ URxvt*secondaryWheel: true
 URxvt.urgentOnBell: True
 
 URxvt.perl-ext: default,matcher,tabbed
+URxvt.url-launcher: opera
+! `urlLauncher` is obsolete, remove when all urxvts are >=9.16
 URxvt.urlLauncher: opera
 URxvt.matcher.button: 1
 URxvt.searchable-scrollback: C-f
