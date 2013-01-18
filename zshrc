@@ -221,6 +221,13 @@ mopload() {
 # Notify at
 notify_at() { echo sw-notify-send "$2" "$3" | at "$1" }
 
+# use $EDITOR to run Lua code in awesome
+evawesome () {
+  local EVALFILE
+  EVALFILE="$HOME/.cache/awesome/eval.lua"
+  $EDITOR "$EVALFILE" && cat "$EVALFILE" | awesome-client
+}
+
 # prompt
 autoload -U promptinit
 promptinit
