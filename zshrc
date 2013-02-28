@@ -186,7 +186,8 @@ task-sync () {
     local taskpath="$HOME/dev/taskwarrior/"
     hg fetch -R $taskpath
     task merge $taskpath/data/
-    hg commit -m "Autocommit by task-sync" -R $taskpath && hg push -R $taskpath
+    hg commit -m "Autocommit by task-sync on $(hostname)" -R $taskpath && \
+        hg push -R $taskpath
 }
 
 # Auto-completion from `cmd --help`
