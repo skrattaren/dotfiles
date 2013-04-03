@@ -95,7 +95,7 @@ alias eixr='eix --cache-file /var/cache/eix/remote.eix'
 findhere() { find . -iname "*$1*" }
 
 # Watch YouTube video with Mplayer
-youmplayer () { mplayer `youtube-dl -g $1` }
+youmplayer () { mplayer2 `youtube-dl -g $1` }
 
 # Coloured and lessed diff
 udiff() {
