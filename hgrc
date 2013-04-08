@@ -4,6 +4,7 @@ convert =
 extdiff =
 fetch =
 highlight =
+histedit =
 mq =
 pager =
 patchbomb =
