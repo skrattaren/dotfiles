@@ -336,5 +336,5 @@ if [[ -f ~/.zshlocal ]]; then
   source ~/.zshlocal
 fi
 
-# vim: softtabstop=2
+# vim: softtabstop=2:shiftwidth=2
 
