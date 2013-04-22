@@ -191,7 +191,7 @@ task-sync () {
 }
 
 # Auto-completion from `cmd --help`
-compdef _gnu_generic feh
+compdef _gnu_generic ag
 
 # Complete pumount like umount
 compdef _mount pumount
