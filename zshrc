@@ -1,6 +1,3 @@
-# Sourcing so sourcing
-source /etc/zsh/zprofile
-
 #Set LS_COLORS
 if [[ -f ~/.dir_colors ]]; then
         eval `dircolors -b ~/.dir_colors`
