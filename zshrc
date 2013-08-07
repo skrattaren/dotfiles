@@ -55,6 +55,10 @@ bindkey " "     magic-space
 bindkey "^[u"   undo
 bindkey "^[r"   redo
 
+# a wee bitty bit of emacs
+bindkey "^A"    beginning-of-line
+bindkey "^E"    end-of-line
+
 bindkey "^R"    history-incremental-search-backward
 
 alias ls='ls -h --color=auto --group-directories-first'
