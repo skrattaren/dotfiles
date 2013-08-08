@@ -8,7 +8,7 @@ RDIR=$(dirname `readlink -fn $0`)
 
 excludes="deploy.sh ir_black_cscheme.vim"
 
-function include() {
+include() {
     for i in ${excludes[@]}; do
         if [ "$i" == "$1" ]; then
             return 1
@@ -17,7 +17,7 @@ function include() {
     return 0
 }
 
-function symlinkit() {
+symlinkit() {
     SRC="$1"
     TRGT="$2"
     if [ -L "$TRGT" ]; then
