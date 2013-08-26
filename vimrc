@@ -12,6 +12,9 @@ set ignorecase smartcase
 set gdefault
 set showmatch
 
+nnoremap / /\v
+vnoremap / /\v
+
 set nobackup noswapfile
 set undofile
 set undodir=~/.vim/undodir
