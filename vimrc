@@ -77,3 +77,7 @@ nnoremap <leader>1 yypVr
 
 nmap <leader>bl :CtrlPBuffer<CR>
 
+" don't let YankRing conflict with CtrlP
+let g:yankring_replace_n_nkey = '<m-n>'
+let g:yankring_replace_n_pkey = '<m-p>'
+
