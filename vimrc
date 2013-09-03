@@ -31,6 +31,8 @@ set nobackup noswapfile
 set undofile
 set undodir=~/.vim/undodir
 
+autocmd FocusLost * :wa
+
 set modeline nowrap
 set relativenumber
 set cursorline showmode showcmd ruler
