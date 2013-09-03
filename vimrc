@@ -75,7 +75,9 @@ let g:pymode_lint_ignore = "E301,E302"
 " format headers in rST (<leader>1 then symbol)
 nnoremap <leader>1 yypVr
 
-nmap <leader>bl :CtrlPBuffer<CR>
+" CtrlP stuff
+nmap <leader>b :CtrlPBuffer<CR>
+nmap <leader>rf :CtrlPMRU<CR>
 
 " don't let YankRing conflict with CtrlP
 let g:yankring_replace_n_nkey = '<m-n>'
