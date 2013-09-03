@@ -55,7 +55,7 @@ set pastetoggle=<F2>
 set background=dark
 if has('gui_running')
     set guioptions=a
-    colorscheme zenburn
+    colorscheme solarized
     set guifont=Terminus\ 11
     set cursorcolumn
 else
