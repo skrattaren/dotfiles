@@ -15,6 +15,9 @@ set showmatch
 nnoremap / /\v
 vnoremap / /\v
 
+nnoremap j gj
+nnoremap k gk
+
 set nobackup noswapfile
 set undofile
 set undodir=~/.vim/undodir
