@@ -118,8 +118,8 @@ ebldopen () { $EDITOR `equery which $1` }
 
 # Open package changelog
 ebldlog () {
-    # I'll enforce vimpager
-    local PAGER="vimpager"
+    # I'll enforce vim (`vimpager` rants about fileencoding on non-modifiable)
+    local PAGER="vim"
     equery changes -f $1 | $PAGER - -c 'set ft=gentoo-changelog'
 }
 
