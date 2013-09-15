@@ -76,12 +76,19 @@ alias mkdir='nocorrect mkdir'
 alias tmux="tmux -u attach || tmux -u"
 alias wget="wget --continue --content-disposition"
 alias grep="grep --colour"
-alias feht="feh -FqtV --sort filename"
-alias feh="feh -FYqV --sort filename"
 alias qmv="qmv --format=do"
 alias qcp="qcp --format=do"
 
 alias dvdplay="mplayer2 dvd://1 -dvd-device"
+
+# we keep full path to `feh` executable in alias for 'feh' alias not to mess
+# with 'feht'
+feh_base="$(which feh) -FqV --sort filename \
+  --font 'DejaVuSans/11' -C /usr/share/fonts/dejavu/"
+
+alias feht="$feh_base -t"
+alias feh="$feh_base -Y"
+unset feh_base
 
 # alias for eix'ing in in separate cache for remotes
 alias eixr='eix --cache-file /var/cache/eix/remote.eix'
