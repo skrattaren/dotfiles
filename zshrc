@@ -272,8 +272,8 @@ prompt_gentoovcs_setup () {
 
   base_prompt="%S%F{$prompt_gentoo_histoff}%v%s%f${base_prompt}"
 
-  path_prompt="%B%F{$prompt_gentoo_prompt}%1~"
-  vcs_prompt='%B%F{$prompt_gentoo_vcs}${vcs_info_msg_0_:+${vcs_info_msg_0_} }'
+  path_prompt="%F{$prompt_gentoo_prompt}%1~"
+  vcs_prompt='%F{$prompt_gentoo_vcs}${vcs_info_msg_0_:+${vcs_info_msg_0_} }'
   post_prompt="%b%f%k"
 
   PS1="${jobs}${base_prompt}${vcs_prompt}${path_prompt} %(0?.%#.%S%#%s) $post_prompt"
