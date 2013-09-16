@@ -299,7 +299,7 @@ prompt_gentoovcs_setup () {
     if [[ -z $HISTFILE ]]; then
       psvar[1]=" H "
     else
-      psvar[1]=()
+      psvar[1]=""
     fi
     echo -ne '\a'
   }
