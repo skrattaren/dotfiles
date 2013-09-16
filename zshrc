@@ -49,7 +49,7 @@ bindkey "^[[B"  down-line-or-history
 bindkey "^[[H"  beginning-of-line
 bindkey "^[[F"  end-of-line
 bindkey "^[e"   expand-cmd-path
-bindkey "^[[1~" beginning-of-line                      # Pos1
+bindkey "^[[1~" beginning-of-line
 bindkey "^[[4~" end-of-line
 bindkey " "     magic-space
 bindkey "^[u"   undo
