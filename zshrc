@@ -287,8 +287,8 @@ prompt_gentoovcs_setup () {
   zstyle ':vcs_info:*' unstagedstr '%U'
   zstyle ':vcs_info:hg:*' get-revision true
   zstyle ':vcs_info:hg:*' get-mq true
-  zstyle ':vcs_info:git:*' formats '[±:%u%b%f%%u]'
-  zstyle ':vcs_info:hg:*' formats '[☿:%u%b%f%m%%u]'
+  zstyle ':vcs_info:git:*' formats '[±:%u%b%%u]'
+  zstyle ':vcs_info:hg:*' formats '[☿:%u%b%m%%u]'
   zstyle ':vcs_info:hg:*' actionformats '[☿:%u%b%%u-%a]'
   zstyle ':vcs_info:hg:*' branchformat '%b'
   zstyle ':vcs_info:hg:*' patch-format '+%p'
