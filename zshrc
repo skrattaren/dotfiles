@@ -284,12 +284,12 @@ prompt_gentoovcs_setup () {
   autoload -Uz vcs_info
   zstyle ':vcs_info:*' enable git svn hg
   zstyle ':vcs_info:*' check-for-changes true
-  zstyle ':vcs_info:*' unstagedstr '%F{blue}'
+  zstyle ':vcs_info:*' unstagedstr '%U'
   zstyle ':vcs_info:hg:*' get-revision true
   zstyle ':vcs_info:hg:*' get-mq true
-  zstyle ':vcs_info:git:*' formats '[±:%u%b%f]'
-  zstyle ':vcs_info:hg:*' formats '[☿:%u%b%f%m]'
-  zstyle ':vcs_info:hg:*' actionformats '[☿:%u%b%f-%a]'
+  zstyle ':vcs_info:git:*' formats '[±:%u%b%f%%u]'
+  zstyle ':vcs_info:hg:*' formats '[☿:%u%b%f%m%%u]'
+  zstyle ':vcs_info:hg:*' actionformats '[☿:%u%b%%u-%a]'
   zstyle ':vcs_info:hg:*' branchformat '%b'
   zstyle ':vcs_info:hg:*' patch-format '+%p'
   zstyle ':vcs_info:hg:*' nopatch-format ''
