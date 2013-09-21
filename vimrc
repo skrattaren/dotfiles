@@ -92,3 +92,5 @@ nmap <leader>rf :CtrlPMRU<CR>
 let g:yankring_replace_n_nkey = '<m-n>'
 let g:yankring_replace_n_pkey = '<m-p>'
 
+" don't litter my $HOME
+let g:yankring_history_dir = "$HOME/.vim"
