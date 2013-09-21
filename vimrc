@@ -59,6 +59,8 @@ nnoremap <silent> <Space> :noh<CR>
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 
+nnoremap <leader>w :%s/\s\+$//<cr>:let @/=''<CR>
+
 set background=dark
 if has('gui_running')
     set guioptions=a
