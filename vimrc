@@ -63,6 +63,8 @@ nnoremap <silent> <Space> :noh<CR>
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 
+nnoremap <leader>w :%s/\s\+$//<cr>:let @/=''<CR>
+
 set background=dark
 if has('gui_running')
     set guioptions=a
@@ -94,3 +96,5 @@ nmap <leader>rf :CtrlPMRU<CR>
 let g:yankring_replace_n_nkey = '<m-n>'
 let g:yankring_replace_n_pkey = '<m-p>'
 
+" don't litter my $HOME
+let g:yankring_history_dir = "$HOME/.vim"
