@@ -13,6 +13,7 @@ purge =
 rebase =
 record =
 relink =
+shelve =
 
 [ui]
 username = Nikolaj Sjujskij <sterkrig@myopera.com>
