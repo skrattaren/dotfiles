@@ -79,7 +79,15 @@ alias grep="grep --colour"
 alias qmv="qmv --format=do"
 alias qcp="qcp --format=do"
 
-alias dvdplay="mplayer2 dvd://1 -dvd-device"
+if hash mpv 2>/dev/null; then
+  MPLAYER="mpv"
+elif hash mplayer2 2>/dev/null; then
+  MPLAYER="mplayer2"
+else
+  MPLAYER="mplayer"
+fi
+
+alias dvdplay="$MPLAYER dvd://1 -dvd-device"
 
 # we keep full path to `feh` executable in alias for 'feh' alias not to mess
 # with 'feht'
@@ -103,7 +111,7 @@ alias eixr='eix --cache-file /var/cache/eix/remote.eix'
 findhere() { find . -iname "*$1*" }
 
 # Watch YouTube video with Mplayer
-youmplayer () { mplayer2 `youtube-dl -g $1` }
+youmplayer () { $MPLAYER `youtube-dl -g $1` }
 
 # Coloured and lessed diff
 udiff() {
