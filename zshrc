@@ -202,6 +202,7 @@ task-sync () {
     local taskpath="$HOME/dev/taskwarrior/"
     hg fetch -R $taskpath
     task merge $taskpath/data/
+    task push $taskpath/data/
     hg commit -m "Autocommit by task-sync on $(hostname)" -R $taskpath && \
         hg push -R $taskpath
 }
