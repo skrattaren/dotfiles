@@ -312,6 +312,7 @@ prompt_gentoovcs_setup () {
     else
       psvar[1]=""
     fi
+    print -Pn "\e]0;%~\a"
     echo -ne '\a'
   }
 }
