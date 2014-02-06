@@ -16,7 +16,7 @@ relink =
 shelve =
 
 [ui]
-username = Nikolaj Sjujskij <sterkrig@myopera.com>
+username = Nikolaj Sjujskij <skrattaren@yandex.ru>
 merge = kdiff3
 ignore = ~/.hgignore
 
@@ -30,12 +30,12 @@ kdiff3.gui=True
 
 [email]
 method = smtp
-from = Nikolaj Sjujskij <sterkrig@myopera.com>
+from = Nikolaj Sjujskij <skrattaren@yandex.ru>
 
 [smtp]
-host = smtp.myopera.com
+host = smtp.yandex.ru
 tls = starttls
-username = sterkrig@myopera.com
+username = skrattaren
 port = 587
 
 [diff]
@@ -49,7 +49,7 @@ smartrebase = rebase -b 'head() and branch(.) and draft()'
                      -d 'head() and branch(.) and public()'
 postdiff = !$HG diff $@ | lodgeit -l diff
 qtip = log --rev qtip --patch
-today = log -u sterkrig -u krigstask --date ">0:00"
+today = log -u skrattaren -u sterkrig -u krigstask --date ">0:00"
 
 [pager]
 attend = annotate, diff, glog, help, log, qdiff, tip
