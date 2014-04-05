@@ -22,7 +22,7 @@ setopt extended_glob
 setopt noequals
 setopt nobeep
 setopt correct
-setopt autocd autopushd
+setopt autocd
 setopt nohup
 setopt hash_cmds
 
