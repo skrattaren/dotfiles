@@ -77,6 +77,7 @@ else
 endif
 
 set textwidth=79
+set backspace=indent,eol,start
 
 " open epub as zip archive
 autocmd BufReadCmd *.epub call zip#Browse(expand("<amatch>"))
