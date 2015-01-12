@@ -357,4 +357,3 @@ if [[ -f ~/.zshlocal ]]; then
 fi
 
 # vim: softtabstop=2:shiftwidth=2
-
