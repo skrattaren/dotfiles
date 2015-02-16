@@ -1,0 +1,17 @@
+"3.8.2 (created: 2014/02/13 23:52:43)
+
+colorscheme solarized
+set gui=none,tabs
+nmap s :tabopen<Space>google<Space>
+nmap S :open<Space>google<Space>
+nmap F ;t
+nmap h :back<Return>
+nmap l :forward<Return>
+nmap H :back!<Return>
+map <C-Tab> i<C-Tab>
+" map <C-S-Tab> i<C-S-Tab>
+set "editor=/usr/local/bin/gvim -f"
+set hintchars=hjklasdf
+source! /Users/skrattaren/.vimperatorrc.local
+
+" vim: set ft=vimperator:
