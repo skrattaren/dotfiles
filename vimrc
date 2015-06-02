@@ -100,3 +100,7 @@ let g:yankring_replace_n_pkey = '<m-p>'
 
 " don't litter my $HOME
 let g:yankring_history_dir = "$HOME/.vim"
+
+let g:ctrlp_working_path_mode = ''
+let g:ctrlp_custom_ignore = {'dir': '\v[\/](target|package)$'}
+
