@@ -12,7 +12,7 @@ map <C-Tab> i<C-Tab>
 " map <C-S-Tab> i<C-S-Tab>
 set "editor=/usr/local/bin/gvim -f"
 set hintchars=hjklasdf
-set urlseparator="\\|"
+set urlseparator=" \\| "
 source! /Users/skrattaren/.vimperatorrc.local
 
 " vim: set ft=vimperator:
