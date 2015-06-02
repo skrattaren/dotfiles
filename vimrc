@@ -55,6 +55,7 @@ set imsearch=0
 " Ё!
 set spelllang=ru_yo,en_gb
 autocmd FileType rst setlocal spell
+autocmd FileType crontab setlocal backupcopy=yes
 
 " press space to clear search highlighting
 nnoremap <silent> <Space> :noh<CR>
