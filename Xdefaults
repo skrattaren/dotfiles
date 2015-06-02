@@ -45,7 +45,7 @@ URxvt*secondaryWheel: true
 URxvt.urgentOnBell: True
 
 URxvt.perl-ext: default,matcher,tabbed
-URxvt.url-launcher: opera
+URxvt.url-launcher: firefox
 URxvt.matcher.button: 1
 URxvt.searchable-scrollback: C-f
 
