@@ -8,6 +8,7 @@ nmap F ;t
 nmap h :back<Return>
 nmap l :forward<Return>
 nmap H :back!<Return>
+nmap C :set nohlsearch<Return>
 map <C-Tab> i<C-Tab>
 " map <C-S-Tab> i<C-S-Tab>
 set "editor=/usr/local/bin/gvim -f"
