@@ -10,4 +10,5 @@ af=drc
 hwdec=vda
 sub-delay=1.9
 no-sub-visibility
-ass-use-margins
+sub-use-margins
+osd-duration=3100
