@@ -83,6 +83,8 @@ include "/usr/share/X11/locale/en_US.UTF-8/Compose"
 <Multi_key> <c> <v> : "☭" U262D
 <Multi_key> <v> <v> : "✓" U2713
 
+<Multi_key> <minus> <Cyrillic_er>: "₽"
+
 
 # Arrows
 # Simple
