@@ -25,7 +25,7 @@ URxvt*termName: rxvt-unicode
 URxvt*tintColor: White
 URxvt*shading: 30
 URxvt*fading: 30
-URxvt*saveLines:13000
+! URxvt*saveLines:13000
 URxvt*foreground: White
 URxvt*background: Black
 URxvt.tabbed.tabbar-fg: 2
