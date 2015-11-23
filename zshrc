@@ -272,7 +272,8 @@ prompt_gentoovcs_setup () {
   base_prompt="%S%F{$prompt_gentoo_histoff}%v%s%f${base_prompt}"
 
   path_prompt="%F{$prompt_gentoo_prompt}%1~"
-  vcs_prompt='%F{$prompt_gentoo_vcs}${vcs_info_msg_0_:+${vcs_info_msg_0_} }'
+  # FIXME: get rid of multiple '%F{$prompt_gentoo_vcs}]'
+  vcs_prompt='%F{$prompt_gentoo_vcs}${vcs_info_msg_0_:+${vcs_info_msg_0_} }%f'
   post_prompt="%b%f%k"
 
   PS1="${jobs}${base_prompt}${vcs_prompt}${path_prompt} %(0?.%#.%S%#%s) $post_prompt"
@@ -286,13 +287,13 @@ prompt_gentoovcs_setup () {
   zstyle ':vcs_info:*' unstagedstr '%U'
   zstyle ':vcs_info:hg:*' get-revision true
   zstyle ':vcs_info:hg:*' get-mq true
-  zstyle ':vcs_info:hg:*' formats '[☿:%u%b%m%%u]'
-  zstyle ':vcs_info:hg:*' actionformats '[☿:%u%b%%u-%a]'
+  zstyle ':vcs_info:hg:*' formats '[☿:%u%b%m%%u%F{$prompt_gentoo_vcs}]'
+  zstyle ':vcs_info:hg:*' actionformats '[☿:%u%b%%u-%a%F{$prompt_gentoo_vcs}]'
   zstyle ':vcs_info:hg:*' branchformat '%b'
   zstyle ':vcs_info:hg:*' patch-format '+%p'
   zstyle ':vcs_info:hg:*' nopatch-format ''
-  zstyle ':vcs_info:git:*' formats '[±:%u%b%%u]'
-  zstyle ':vcs_info:git:*' actionformats '[±:%u%b%%u|%a]'
+  zstyle ':vcs_info:git:*' formats '[±:%u%b%%u%F{$prompt_gentoo_vcs}]'
+  zstyle ':vcs_info:git:*' actionformats '[±:%u%b%%u|%a%F{$prompt_gentoo_vcs}]'
 
   add-zsh-hook precmd vcs_info
   add-zsh-hook precmd (){
