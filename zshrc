@@ -113,9 +113,6 @@ alias eixr='eix --cache-file /var/cache/eix/remote.eix'
 # `find` things easily
 findhere() { find . -iname "*$1*" }
 
-# Watch YouTube video with mpv or something
-youmpv () { $MPLAYER `youtube-dl -g -f best $1` }
-
 # Coloured and lessed diff
 udiff() {
         diff -ur $1 $2 | pygmentize -g -O encoding=latin1 | less -FRXe
