@@ -57,7 +57,7 @@ set imsearch=0
 
 " Ё!
 set spelllang=ru_yo,en_gb
-autocmd FileType {rst,markdown} setlocal spell
+autocmd FileType {rst,markdown} setlocal spell formatoptions+=t
 autocmd FileType crontab setlocal backupcopy=yes
 
 " press space to clear search highlighting
