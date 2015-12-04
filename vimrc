@@ -43,6 +43,7 @@ set cursorline showmode showcmd ruler
 set colorcolumn=79
 set textwidth=79
 set backspace=indent,eol,start
+set formatoptions-=t
 set ttyfast
 set wildmenu
 set wildignore=*.pyc
