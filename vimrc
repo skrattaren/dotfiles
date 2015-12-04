@@ -41,6 +41,8 @@ set modeline nowrap
 set relativenumber
 set cursorline showmode showcmd ruler
 set colorcolumn=79
+set textwidth=79
+set backspace=indent,eol,start
 set ttyfast
 set wildmenu
 set wildignore=*.pyc
@@ -76,9 +78,6 @@ else
     set t_Co=16
     colorscheme ir_black
 endif
-
-set textwidth=79
-set backspace=indent,eol,start
 
 " open epub as zip archive
 autocmd BufReadCmd *.epub call zip#Browse(expand("<amatch>"))
