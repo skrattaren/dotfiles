@@ -29,6 +29,9 @@ setopt hash_cmds
 # Don't fail on unsuccessful globbing
 unsetopt nomatch
 
+# Stop interpreting comments
+setopt interactivecomments
+
 bindkey -v
 
 # The following lines were added by compinstall
