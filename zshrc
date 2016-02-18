@@ -67,15 +67,12 @@ bindkey '^[^[[C' forward-word
 
 bindkey "^R"    history-incremental-search-backward
 
-alias ls='ls -h --color=auto --group-directories-first'
+alias ls='ls -h --quoting-style=literal --color=auto --group-directories-first'
 alias df='df -m'
-alias lsl='ls -hl --color=auto --group-directories-first'
 
 alias mv='nocorrect mv -i'
 alias cp='nocorrect cp -Ri'
 alias rm='nocorrect rm -rI'
-alias rmf='nocorrect rm -f'
-alias rmrf='nocorrect rm -fR'
 alias mkdir='nocorrect mkdir'
 
 # Convenient ones
