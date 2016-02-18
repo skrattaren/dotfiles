@@ -75,9 +75,11 @@ if has('gui_running')
     colorscheme solarized
     set guifont=Terminus\ 11
     set cursorcolumn
+    set mouse="a"
 else
     set t_Co=16
     colorscheme ir_black
+    set mouse=
 endif
 
 " open epub as zip archive
