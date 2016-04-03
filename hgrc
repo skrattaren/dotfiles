@@ -17,7 +17,7 @@ shelve =
 hgext.hgview = !
 
 [ui]
-username = Nikolaj Sjujskij <skrattaren@yandex.ru>
+username = Nikolaj Šujskij <skrattaren@yandex.ru>
 merge = kdiff3
 ignore = ~/.hgignore
 
