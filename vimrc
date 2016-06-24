@@ -108,3 +108,6 @@ let g:ctrlp_custom_ignore = {'dir': '\v[\/](target|package)$'}
 
 " comment with extra space
 let NERDSpaceDelims=1
+
+" use the_silver_searcher with ackvim
+let g:ackprg = 'ag --vimgrep'
