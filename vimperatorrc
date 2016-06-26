@@ -14,7 +14,7 @@ map <C-Tab> i<C-Tab>
 set "editor=/usr/local/bin/gvim -f"
 set hintchars=hjklasdf
 set urlseparator=" \\| "
-ignorekeys add -except g,t,T,: bazqux.com
+ignorekeys add -except g,t,T,;,:,s,<C-p>,<C-n>,<C-6>,u bazqux.com
 source! /Users/skrattaren/.vimperatorrc.local
 
 " vim: set ft=vimperator:
