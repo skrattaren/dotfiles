@@ -19,8 +19,11 @@
 "mpc next"
   XF86AudioNext
 
-"mpc single"
+"mpc single on"
   XF86AudioMute
+
+"mpc single off"
+  shift + XF86AudioMute
 
 "amixer set Master 3%+"
   XF86AudioRaiseVolume
