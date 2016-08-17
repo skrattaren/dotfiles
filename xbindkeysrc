@@ -10,6 +10,9 @@
 "mpc stop"
   XF86AudioStop
 
+"mpc stop"
+  shift + XF86AudioPlay
+
 "mpc prev"
   XF86AudioPrev
 
