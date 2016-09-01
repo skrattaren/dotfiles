@@ -48,7 +48,10 @@ symlinkit "$RDIR/ir_black_cscheme.vim" "$VIMCSDIR/ir_black.vim"
 
 for f in $FILES; do
     if include "$f"; then
-        symlinkit "$RDIR/$f" "$HOME/.$f"
+        [ -d "$f" ] && f="$f/*"
+        for f_ in $f; do
+            symlinkit "$RDIR/$f_" "$HOME/.$f_"
+        done
     fi
 done
 
