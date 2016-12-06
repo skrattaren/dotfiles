@@ -91,6 +91,8 @@ let g:pymode_lint_ignore = "E301,E302"
 
 " format headers in rST (<leader>1 then symbol)
 nnoremap <leader>1 yypVr
+" wrap current paragraph
+nnoremap <leader>P vipgq
 
 " CtrlP stuff
 nmap <leader>b :CtrlPBuffer<CR>
