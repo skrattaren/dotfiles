@@ -4,3 +4,14 @@ def_key "^"
 def_key "S"
   toggle_single
 
+def_key "right"
+  next_column
+
+def_key "right"
+  slave_screen
+
+def_key "left"
+  previous_column
+
+def_key "left"
+  master_screen
