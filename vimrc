@@ -97,6 +97,12 @@ nnoremap <leader>P vipgq
 " CtrlP stuff
 nmap <leader>b :CtrlPBuffer<CR>
 nmap <leader>rf :CtrlPMRU<CR>
+let g:ctrlp_working_path_mode = ''
+if executable('ag')
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  let g:ctrlp_use_caching = 0
+endif
+
 
 " don't let YankRing conflict with CtrlP
 let g:yankring_replace_n_nkey = '<m-n>'
@@ -104,9 +110,6 @@ let g:yankring_replace_n_pkey = '<m-p>'
 
 " don't litter my $HOME
 let g:yankring_history_dir = "$HOME/.vim"
-
-let g:ctrlp_working_path_mode = ''
-let g:ctrlp_custom_ignore = {'dir': '\v[\/](target|package)$'}
 
 " comment with extra space
 let NERDSpaceDelims=1
