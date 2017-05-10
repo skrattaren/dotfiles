@@ -1,6 +1,12 @@
 [user]
-	name = Nikolaj Šujskij
-	email = skrattaren@yandex.ru
-
+    name = Nikolaj Šujskij
+    email = skrattaren@yandex.ru
 [color]
-	ui = on
+    ui = on
+[push]
+    default = current
+[core]
+    editor = vim
+    excludesfile = ~/.gitignore
+[alias]
+    ppull = pull -p
