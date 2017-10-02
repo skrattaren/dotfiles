@@ -1,6 +1,8 @@
+! General Xorg stuff
 Xcursor.theme: Vanilla-DMZ-AA
-!Xcursor.theme: Chameleon-DarkSkyBlue-Small
+Xft.dpi: 120.0
 
+! terminal colours
 *background: rgb:00/00/00
 *foreground: rgb:aa/aa/aa
 *color0:     rgb:00/00/00
@@ -20,12 +22,15 @@ Xcursor.theme: Vanilla-DMZ-AA
 *color7:     rgb:be/be/be
 *color15:    rgb:ff/ff/ff
 
-URxvt*termName: rxvt-unicode
+URxvt.perl-ext: default,matcher,tabbed
+URxvt.urgentOnBell: True
+URxvt*font: xft:Terminus:pixelsize=16,xft:DejaVu Sans Mono:pixelsize=16
+URxvt.url-launcher: xdg-open
+
 URxvt.tabbed.tabbar-fg: 2
 URxvt.tabbed.tabbar-bg: 0
 URxvt.tabbed.tab-fg:    0
 URxvt.tabbed.tab-bg:    2
-URxvt*font: xft:Terminus:pixelsize=16,xft:DejaVu Sans Mono:pixelsize=16
 
 URxvt*scrollBar: true
 URxvt*scrollBar_right: true
@@ -35,13 +40,6 @@ URxvt*scrollWithBuffer: true
 URxvt*skipScroll: false
 URxvt*secondaryWheel: true
 
-URxvt.urgentOnBell: True
-
-URxvt.perl-ext: default,matcher,tabbed,clipboard-osc
-URxvt.url-launcher: firefox
-URxvt.matcher.button: 1
-URxvt.searchable-scrollback: M-f
-
-URxvt.keysym.Shift-Control-V: perl:clipboard:paste
-
-Xft.dpi: 120.0
+URxvt.keysym.M-f: searchable-scrollback:start
+URxvt.keysym.M-o: matcher:last
+URxvt.keysym.M-C-o: matcher:select
