@@ -1,5 +1,5 @@
-"xlock -mode blank"
-  Mod4 + s
+"xlock -mode penrose"
+  Mod1 + Mod4 + s
 
 "dmenu_run"
   Mod4 + d
