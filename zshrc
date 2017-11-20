@@ -1,8 +1,8 @@
 #Set LS_COLORS
 if [[ -f ~/.dir_colors ]]; then
-        eval `dircolors -b ~/.dir_colors`
+    eval `dircolors -b ~/.dir_colors`
 else
-        eval `dircolors -b /etc/DIR_COLORS`
+    eval `dircolors -b /etc/DIR_COLORS`
 fi
 
 # History settings
@@ -83,11 +83,11 @@ alias qmv="qmv --format=do"
 alias qcp="qcp --format=do"
 
 if hash mpv 2>/dev/null; then
-  MPLAYER="mpv"
+    MPLAYER="mpv"
 elif hash mplayer2 2>/dev/null; then
-  MPLAYER="mplayer2"
+    MPLAYER="mplayer2"
 else
-  MPLAYER="mplayer"
+    MPLAYER="mplayer"
 fi
 
 alias dvdplay="$MPLAYER dvd://1 -dvd-device"
@@ -95,7 +95,7 @@ alias dvdplay="$MPLAYER dvd://1 -dvd-device"
 # we keep full path to `feh` executable in alias for 'feh' alias not to mess
 # with 'feht'
 feh_base="$(which feh) -FqV --auto-rotate --sort filename \
-  --font 'DejaVuSans/11' -C /usr/share/fonts/dejavu/"
+    --font 'DejaVuSans/11' -C /usr/share/fonts/dejavu/"
 
 alias feht="$feh_base -t"
 alias feh="$feh_base -Y"
@@ -115,7 +115,7 @@ findhere() { find . -iname "*$1*" }
 
 # Coloured and lessed diff
 udiff() {
-        diff -ur $1 $2 | pygmentize -g -O encoding=latin1 | less -FRXe
+    diff -ur $1 $2 | pygmentize -g -O encoding=latin1 | less -FRXe
 }
 
 # Grep current kernel config for options
@@ -230,9 +230,9 @@ notify_at() { echo sw-notify-send "$2" "$3" | at "$1" }
 
 # use $EDITOR to run Lua code in awesome
 evawesome () {
-  local EVALFILE
-  EVALFILE="$HOME/.cache/awesome/eval.lua"
-  $EDITOR "$EVALFILE" && cat "$EVALFILE" | awesome-client
+    local EVALFILE
+    EVALFILE="$HOME/.cache/awesome/eval.lua"
+    $EDITOR "$EVALFILE" && cat "$EVALFILE" | awesome-client
 }
 
 # prompt
@@ -242,7 +242,7 @@ promptinit
 setopt prompt_subst
 
 prompt_gentoovcs_help () {
-  cat <<'EOF'
+    cat <<'EOF'
 Standard Gentoo prompt theme with VCS info. Like original, it's color-scheme-able:
 
   prompt gentoovcs [<promptcolour> [<usercolour> [<rootcolour> [<vcsinfocolour>] \
@@ -253,64 +253,64 @@ EOF
 }
 
 prompt_gentoovcs_setup () {
-  prompt_gentoo_prompt=${1:-'blue'}
-  prompt_gentoo_user=${2:-'green'}
-  prompt_gentoo_root=${3:-'red'}
-  prompt_gentoo_vcs=${4:-'white'}
-  prompt_gentoo_job=${5:-'magenta'}
-  prompt_gentoo_histoff=${6:-'white'}
+    prompt_gentoo_prompt=${1:-'blue'}
+    prompt_gentoo_user=${2:-'green'}
+    prompt_gentoo_root=${3:-'red'}
+    prompt_gentoo_vcs=${4:-'white'}
+    prompt_gentoo_job=${5:-'magenta'}
+    prompt_gentoo_histoff=${6:-'white'}
 
-  jobs="%F{$prompt_gentoo_job}%(1j. [%j] .)%f"
+    jobs="%F{$prompt_gentoo_job}%(1j. [%j] .)%f"
 
-  if [ "$USER" = 'root' ]
-  then
-    base_prompt="%B%F{$prompt_gentoo_root}%m%k "
-  else
-    base_prompt="%B%F{$prompt_gentoo_user}%n@%m%k "
-  fi
-
-  base_prompt="%S%F{$prompt_gentoo_histoff}%v%s%f${base_prompt}"
-
-  path_prompt="%F{$prompt_gentoo_prompt}%1~"
-  # FIXME: get rid of multiple '%F{$prompt_gentoo_vcs}]'
-  vcs_prompt='%F{$prompt_gentoo_vcs}${vcs_info_msg_0_:+${vcs_info_msg_0_} }%f'
-  post_prompt="%b%f%k"
-
-  PS1="${jobs}${base_prompt}${vcs_prompt}${path_prompt} %(0?.%#.%S%#%s) $post_prompt"
-  PS2="$base_prompt$path_prompt %_> $post_prompt"
-  PS3="$base_prompt$path_prompt ?# $post_prompt"
-
-  # vcs_info options
-  autoload -Uz vcs_info
-  zstyle ':vcs_info:*' enable git svn hg
-  zstyle ':vcs_info:*' check-for-changes true
-  zstyle ':vcs_info:*' unstagedstr '%U'
-  zstyle ':vcs_info:hg:*' get-revision true
-  zstyle ':vcs_info:hg:*' get-mq true
-  zstyle ':vcs_info:hg:*' formats '[☿:%u%b%m%%u%F{$prompt_gentoo_vcs}]'
-  zstyle ':vcs_info:hg:*' actionformats '[☿:%u%b%%u-%a%F{$prompt_gentoo_vcs}]'
-  zstyle ':vcs_info:hg:*' branchformat '%b'
-  zstyle ':vcs_info:hg:*' patch-format '+%p'
-  zstyle ':vcs_info:hg:*' nopatch-format ''
-  zstyle ':vcs_info:git:*' formats '[±:%u%b%%u%F{$prompt_gentoo_vcs}]'
-  zstyle ':vcs_info:git:*' actionformats '[±:%u%b%%u|%a%F{$prompt_gentoo_vcs}]'
-
-  add-zsh-hook precmd vcs_info
-  add-zsh-hook precmd (){
-    if [[ -z $HISTFILE ]]; then
-      psvar[1]=" H "
+    if [ "$USER" = 'root' ]
+    then
+        base_prompt="%B%F{$prompt_gentoo_root}%m%k "
     else
-      psvar[1]=""
+        base_prompt="%B%F{$prompt_gentoo_user}%n@%m%k "
     fi
-    print -Pn "\e]0;%~ %#\a"
-    echo -ne '\a'
-  }
+
+    base_prompt="%S%F{$prompt_gentoo_histoff}%v%s%f${base_prompt}"
+
+    path_prompt="%F{$prompt_gentoo_prompt}%1~"
+    # FIXME: get rid of multiple '%F{$prompt_gentoo_vcs}]'
+    vcs_prompt='%F{$prompt_gentoo_vcs}${vcs_info_msg_0_:+${vcs_info_msg_0_} }%f'
+    post_prompt="%b%f%k"
+
+    PS1="${jobs}${base_prompt}${vcs_prompt}${path_prompt} %(0?.%#.%S%#%s) $post_prompt"
+    PS2="$base_prompt$path_prompt %_> $post_prompt"
+    PS3="$base_prompt$path_prompt ?# $post_prompt"
+
+    # vcs_info options
+    autoload -Uz vcs_info
+    zstyle ':vcs_info:*' enable git svn hg
+    zstyle ':vcs_info:*' check-for-changes true
+    zstyle ':vcs_info:*' unstagedstr '%U'
+    zstyle ':vcs_info:hg:*' get-revision true
+    zstyle ':vcs_info:hg:*' get-mq true
+    zstyle ':vcs_info:hg:*' formats '[☿:%u%b%m%%u%F{$prompt_gentoo_vcs}]'
+    zstyle ':vcs_info:hg:*' actionformats '[☿:%u%b%%u-%a%F{$prompt_gentoo_vcs}]'
+    zstyle ':vcs_info:hg:*' branchformat '%b'
+    zstyle ':vcs_info:hg:*' patch-format '+%p'
+    zstyle ':vcs_info:hg:*' nopatch-format ''
+    zstyle ':vcs_info:git:*' formats '[±:%u%b%%u%F{$prompt_gentoo_vcs}]'
+    zstyle ':vcs_info:git:*' actionformats '[±:%u%b%%u|%a%F{$prompt_gentoo_vcs}]'
+
+    add-zsh-hook precmd vcs_info
+    add-zsh-hook precmd (){
+        if [[ -z $HISTFILE ]]; then
+            psvar[1]=" H "
+        else
+            psvar[1]=""
+        fi
+        print -Pn "\e]0;%~ %#\a"
+        echo -ne '\a'
+    }
 }
 
 if [[ $TERM == "screen" ]] then
-  prompt clint
+    prompt clint
 else
-  prompt_gentoovcs_setup "$@"
+    prompt_gentoovcs_setup "$@"
 fi
 
 # Zmv!
@@ -334,8 +334,8 @@ zstyle '*' hosts $hosts
 
 # Force rehashing
 _force_rehash() {
-  (( CURRENT == 1 )) && rehash
-  return 1
+    (( CURRENT == 1 )) && rehash
+    return 1
 }
 
 # Load forced rehash
@@ -343,7 +343,7 @@ zstyle ':completion:*' completer _oldlist _expand _force_rehash _complete
 
 # Load local file
 if [[ -f ~/.zshlocal ]]; then
-  source ~/.zshlocal
+    source ~/.zshlocal
 fi
 
-# vim: softtabstop=2:shiftwidth=2
+# vim: softtabstop=4:shiftwidth=4
