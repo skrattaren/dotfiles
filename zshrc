@@ -7,30 +7,20 @@ fi
 
 # History settings
 HISTFILE=~/.histfile
-HISTSIZE=3000
-SAVEHIST=3000
-setopt append_history inc_append_history
-setopt no_hist_beep
-setopt hist_ignore_dups hist_ignore_all_dups hist_expire_dups_first
-setopt hist_save_no_dups hist_find_no_dups
-# Use the same history file for all sessions
-setopt share_history
-# Let the user edit the command line after history expansion (e.g. !ls) instead of immediately running it
+setopt hist_ignore_all_dups
 setopt hist_verify
+setopt inc_append_history
+setopt share_history
+unsetopt hist_beep
 
-setopt extended_glob
-setopt noequals
-setopt nobeep
-setopt correct
 setopt autocd
-setopt nohup
-setopt hash_cmds
-
-# Don't fail on unsuccessful globbing
+setopt correct
+setopt extended_glob
+setopt interactive_comments
+unsetopt beep
+unsetopt equals
+unsetopt hup
 unsetopt nomatch
-
-# Stop interpreting comments
-setopt interactivecomments
 
 bindkey -v
 
