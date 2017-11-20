@@ -94,7 +94,7 @@ alias dvdplay="$MPLAYER dvd://1 -dvd-device"
 
 # we keep full path to `feh` executable in alias for 'feh' alias not to mess
 # with 'feht'
-feh_base="$(which feh) -FqV --sort filename \
+feh_base="$(which feh) -FqV --auto-rotate --sort filename \
   --font 'DejaVuSans/11' -C /usr/share/fonts/dejavu/"
 
 alias feht="$feh_base -t"
