@@ -68,12 +68,10 @@ bindkey '^[^[[C' forward-word
 bindkey "^R"    history-incremental-search-backward
 
 alias ls='ls -h --quoting-style=literal --color=auto --group-directories-first'
-alias df='df -m'
 
-alias mv='nocorrect mv -i'
-alias cp='nocorrect cp -Ri'
-alias rm='nocorrect rm -rI'
-alias mkdir='nocorrect mkdir'
+alias mv='mv -i'
+alias cp='cp -Ri'
+alias rm='rm -rI'
 
 # Convenient ones
 alias tmux="tmux -u attach || tmux -u"
@@ -202,28 +200,6 @@ compdef _gnu_generic ag
 
 # Complete pumount like umount
 compdef _mount pumount
-
-# Completion for media players
-compdef _mplayer mplayer2
-
-# Rubyless omploading
-ompload() {
-    curl -F file1=@"$1" http://ompldr.org/upload | \
-        awk '/Info:|File:|Thumbnail:|BBCode:/{gsub(/<[^<]*?\/?>/,"");$1=$1;sub(/^/,"\033[0;    34m");sub(/:/,"\033[0m: ");print}'
-}
-
-# Upload to MyOpera
-# generate cookie with
-# % curl -sLc ~/.config/myoperacookie -d "user=$USER&passwd=$PWD&remember=1" \
-#     https://my.opera.com/community/login/index.pl -o /dev/null
-mopload() {
-    local filename encoded
-    filename=$(basename "$1")
-    curl -sLb ~/.config/myoperacookie \
-         http://upload.my.opera.com/Sterkrig/files/addpic.pl \
-         -F file=@"${1}" -F dir="${2}" | grep "$filename" | grep scanfilelink \
-            | sed 's:<a href="\(.\+\)" id="scanfilelink".\+$:\1:g'
-}
 
 # Notify at
 notify_at() { echo sw-notify-send "$2" "$3" | at "$1" }
