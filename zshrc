@@ -7,6 +7,9 @@ fi
 
 # History settings
 HISTFILE=~/.histfile
+HISTSIZE=3000
+SAVEHIST=3000
+
 setopt hist_ignore_all_dups
 setopt hist_verify
 setopt inc_append_history
