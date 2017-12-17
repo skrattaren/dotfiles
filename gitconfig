@@ -2,7 +2,7 @@
     name = Nikolaj Šujskij
     email = skrattaren@yandex.ru
 [color]
-    ui = on
+    ui = true
 [push]
     default = current
 [core]
