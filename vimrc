@@ -12,6 +12,10 @@ set ignorecase smartcase
 set gdefault
 set showmatch
 
+if has('nvim')
+    set inccommand=split
+endif
+
 nnoremap / /\v
 vnoremap / /\v
 
