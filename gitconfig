@@ -10,3 +10,4 @@
     excludesfile = ~/.gitignore
 [alias]
     ppull = pull -p
+    root = rev-parse --show-toplevel
