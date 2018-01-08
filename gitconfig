@@ -8,6 +8,7 @@
 [core]
     editor = vim
     excludesfile = ~/.gitignore
+    pager = less -RFX -x4
 [alias]
     ppull = pull -p
     root = rev-parse --show-toplevel
