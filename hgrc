@@ -24,6 +24,8 @@ ignore = ~/.hgignore
 [extdiff]
 cmd.kdiff = kdiff3
 cmd.vdiff = vimdiff
+cmd.icdiff=icdiff
+opts.icdiff=--recursive
 
 [merge-tools]
 kdiff3.args=$base $local $other -o $output
