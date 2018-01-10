@@ -119,3 +119,11 @@ let NERDSpaceDelims=1
 
 " use the_silver_searcher with ackvim
 let g:ackprg = 'ag --vimgrep'
+
+" Syntastic stuff
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_check_on_wq = 0
