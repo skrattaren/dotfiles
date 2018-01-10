@@ -24,7 +24,7 @@ Xft.dpi: 120.0
 
 URxvt.perl-ext: default,matcher,tabbed
 URxvt.urgentOnBell: True
-URxvt*font: xft:Terminus:pixelsize=16,xft:DejaVu Sans Mono:pixelsize=16
+URxvt*font: xft:xos4 Terminus:pixelsize=16,xft:DejaVu Sans Mono:pixelsize=16
 URxvt.url-launcher: xdg-open
 
 URxvt.tabbed.tabbar-fg: 2
