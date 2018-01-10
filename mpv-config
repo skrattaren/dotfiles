@@ -8,7 +8,7 @@ audio-file-auto=fuzzy
 sub-delay=1.9
 no-sub-visibility
 sub-use-margins
-sub-file-paths=sub:subtitles:subs:eng subs
+sub-file-paths=sub:subtitles:subs:eng subs:/tmp
 osd-duration=3100
 no-audio-display
 cache=7168
