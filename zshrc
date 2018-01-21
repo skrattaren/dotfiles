@@ -54,6 +54,8 @@ bindkey "^[r"   redo
 # a wee bitty bit of emacs
 bindkey "^A"    beginning-of-line
 bindkey "^E"    end-of-line
+bindkey "^K"    kill-line
+
 # Alt-<> for jumping by word
 bindkey '^[^[[D' backward-word
 bindkey '^[^[[C' forward-word
