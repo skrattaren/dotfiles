@@ -57,8 +57,8 @@ bindkey "^E"    end-of-line
 bindkey "^K"    kill-line
 
 # Alt-<> for jumping by word
-bindkey '^[^[[D' backward-word
-bindkey '^[^[[C' forward-word
+bindkey "^[^[[D" backward-word
+bindkey "^[^[[C" forward-word
 
 bindkey "^R"    history-incremental-search-backward
 
