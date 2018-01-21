@@ -124,13 +124,6 @@ urlix () {
 # Open package's ebuild in editor
 ebldopen () { $EDITOR `equery which $1` }
 
-# Open package changelog
-ebldlog () {
-    # I'll enforce vim (`vimpager` rants about fileencoding on non-modifiable)
-    local PAGER="vim"
-    equery changes -f $1 | $PAGER - -c 'set ft=gentoo-changelog'
-}
-
 compdef "_gentoo_packages available" urlix ebldopen ebldlog
 
 # Find and symlink package from overlay
