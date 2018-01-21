@@ -11,5 +11,6 @@ sub-file-paths=sub:subtitles:subs:eng subs:/tmp
 osd-duration=3100
 no-audio-display
 cache=7168
+screenshot-directory=/tmp/
 
 # vim:filetype=cfg
