@@ -296,6 +296,9 @@ zstyle ':completion:*:processes' sort false
 zstyle ':completion:*:processes-names' command 'ps xho command'
 zstyle '*' hosts $hosts
 
+# fuzzy-like completion
+zstyle ':completion:*' matcher-list '' 'r:|?=** m:{a-z\-}={A-Z\_}'
+
 # Force rehashing
 _force_rehash() {
     (( CURRENT == 1 )) && rehash
