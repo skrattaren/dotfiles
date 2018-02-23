@@ -102,9 +102,6 @@ nnoremap <leader>P vipgq
 nmap <leader>b :CtrlPBuffer<CR>
 nmap <leader>rf :CtrlPMRU<CR>
 let g:ctrlp_working_path_mode = 'r'
-if executable('ag')
-  let g:ctrlp_user_command = 'ag --nocolor -g "" %s'
-endif
 
 
 " don't let YankRing conflict with CtrlP
@@ -117,8 +114,20 @@ let g:yankring_history_dir = "$HOME/.vim"
 " comment with extra space
 let NERDSpaceDelims=1
 
-" use the_silver_searcher with ackvim
-let g:ackprg = 'ag --vimgrep'
+" check and use the_silver_searcher or `ripgrep`
+" TODO: prefer `rg` when its hgignore support is ready
+" FIXME: DRY
+if executable('ag')
+  let g:ctrlp_user_command = 'ag --nocolor -g "" %s'
+  let g:ackprg = 'ag --vimgrep'
+  set grepprg=ag\ --vimgrep
+  set grepformat=%f:%l:%c:%m
+elseif executable('rg')
+  let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
+  let g:ackprg = 'rg --vimgrep'
+  set grepprg=rg\ --vimgrep
+  set grepformat=%f:%l:%c:%m
+endif
 
 " Syntastic stuff
 set statusline+=%#warningmsg#
