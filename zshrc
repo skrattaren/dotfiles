@@ -1,11 +1,11 @@
-#Set LS_COLORS
+# set LS_COLORS
 if [[ -f ~/.dir_colors ]]; then
     eval `dircolors -b ~/.dir_colors`
 else
     eval `dircolors -b /etc/DIR_COLORS`
 fi
 
-# History settings
+# history settings
 HISTFILE=~/.histfile
 HISTSIZE=3000
 SAVEHIST=3000
@@ -27,12 +27,12 @@ unsetopt nomatch
 
 bindkey -v
 
-# The following lines were added by compinstall
+# the following lines were added by compinstall
 zstyle :compinstall filename '~/.zshrc'
 
 autoload -Uz compinit
 compinit
-# End of lines added by compinstall
+# end of lines added by compinstall
 
 bindkey "^[[2~" yank
 bindkey "^[[3~" delete-char
@@ -56,7 +56,7 @@ bindkey "^A"    beginning-of-line
 bindkey "^E"    end-of-line
 bindkey "^K"    kill-line
 
-# Alt-<> for jumping by word
+# alt-<> for jumping by word
 bindkey "^[^[[D" backward-word
 bindkey "^[^[[C" forward-word
 
@@ -68,7 +68,7 @@ alias mv='mv -i'
 alias cp='cp -Ri'
 alias rm='rm -rI'
 
-# Convenient ones
+# convenient ones
 alias tmux="tmux -u attach || tmux -u"
 alias wget="wget --continue --content-disposition"
 alias grep="grep --colour"
@@ -106,27 +106,27 @@ alias eixr='eix --cache-file /var/cache/eix/remote.eix'
 # `find` things easily
 findhere() { find . -iname "*$1*" }
 
-# Coloured and lessed diff
+# coloured and lessed diff
 udiff() {
     diff -ur $1 $2 | pygmentize -g -O encoding=latin1 | less -FRXe
 }
 
-# Grep current kernel config for options
+# grep current kernel config for options
 krngrep() { zgrep --colour --ignore-case $1 /proc/config.gz }
 
-# Open package homepage
+# open package homepage
 urlix () {
     for url in `eix -e --pure-packages $1 --format '<homepage> '`; do
         $BROWSER "$url" &> /dev/null;
     done
 }
 
-# Open package's ebuild in editor
+# open package's ebuild in editor
 ebldopen () { $EDITOR `equery which $1` }
 
 compdef "_gentoo_packages available" urlix ebldopen ebldlog
 
-# Find and symlink package from overlay
+# find and symlink package from overlay
 lnspkg () {
     local pkg len LCLPORT LMNDIR
     LMNDIR="/var/lib/layman"
@@ -155,7 +155,7 @@ lnspkg () {
     fi
 }
 
-# Digest and compile latest non-live ebuild in ./
+# digest and compile latest non-live ebuild in ./
 digest_compile_latest() {
     local ebuilds latest_ebuild
     ebuilds=( ./*-^(9999).ebuild )
@@ -175,7 +175,7 @@ toggle_history() {
     fi
 }
 
-# Convert and read rST document in browser
+# convert and read rST document in browser
 rstread() {
     local htmlfile
     htmlfile="/tmp/$(basename $1).html"
@@ -183,13 +183,13 @@ rstread() {
     echo file://$htmlfile
 }
 
-# Auto-completion from `cmd --help`
+# auto-completion from `cmd --help`
 compdef _gnu_generic ag
 
-# Complete pumount like umount
+# complete pumount like umount
 compdef _mount pumount
 
-# Notify at
+# notify at
 notify_at() { echo sw-notify-send "$2" "$3" | at "$1" }
 
 # use $EDITOR to run Lua code in awesome
@@ -277,20 +277,20 @@ else
     prompt_gentoovcs_setup "$@"
 fi
 
-# Zmv!
+# zmv!
 autoload -U zmv
-# Zcalc!
+# zcalc!
 autoload -U zcalc
 
-# Cache completion
+# cache completion
 zstyle ':completion::complete:*' use-cache 1
 
-# List completions
+# list completions
 zmodload zsh/complist
 zstyle ':completion:*' menu select
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
-# Kill processes with completion
+# kill processes with completion
 zstyle ':completion:*:processes' command 'ps -xuf'
 zstyle ':completion:*:processes' sort false
 zstyle ':completion:*:processes-names' command 'ps xho command'
@@ -298,16 +298,16 @@ zstyle ':completion:*:processes-names' command 'ps xho command'
 # fuzzy-like completion
 zstyle ':completion:*' matcher-list '' 'r:|?=** m:{a-z\-}={A-Z\_}'
 
-# Force rehashing
+# force rehashing
 _force_rehash() {
     (( CURRENT == 1 )) && rehash
     return 1
 }
 
-# Load forced rehash
+# load forced rehash
 zstyle ':completion:*' completer _oldlist _expand _force_rehash _complete
 
-# Load local file
+# load local file
 if [[ -f ~/.zshlocal ]]; then
     source ~/.zshlocal
 fi
