@@ -77,7 +77,7 @@ set background=dark
 if has('gui_running')
     set guioptions=a
     colorscheme solarized
-    set guifont=Terminus\ 11
+    set guifont=xos4\ Terminus\ 11
     set cursorcolumn
     set mouse="a"
 else
