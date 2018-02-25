@@ -128,11 +128,3 @@ elseif executable('rg')
   set grepprg=rg\ --vimgrep
   set grepformat=%f:%l:%c:%m
 endif
-
-" Syntastic stuff
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_check_on_wq = 0
