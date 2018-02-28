@@ -235,7 +235,7 @@ prompt_squiggle_pp_setup () {
 
     base_prompt="%S%F{$clr_histoff}%v%s%f${base_prompt}"
 
-    path_prompt="%F{$clr_path}%1~"
+    path_prompt="%F{$clr_path}%(5~|%-1~/…/%3~|%4~)"
     # FIXME: get rid of multiple '%F{$clr_vcs}]'
     vcs_prompt='%F{$clr_vcs}${vcs_info_msg_0_:+${vcs_info_msg_0_} }%f'
     post_prompt="%b%f%k"
