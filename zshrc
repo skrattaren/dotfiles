@@ -211,19 +211,18 @@ A colourful prompt, with SCM info, jobs, return code and histoff marker.
 Pretty Prompt, named after Lupin Squiggle Sec'y pp
 Originally it was based on Gentoo prompt.  Colour-scheme-able:
 
-    prompt squiggle_pp [<promptcolour> [<usercolour> [<rootcolour> \
-                       [<vcsinfocolour> [<jobnumcolor> [<histmarkcolour>]]]]]]
+    prompt squiggle_pp [<pathcolour> [<rootcolour> [<vcsinfocolour> \
+                       [<jobnumcolor> [<histmarkcolour>]]]]]
 
 EOF
 }
 
 prompt_squiggle_pp_setup () {
-    clr_prompt=${1:-'blue'}
-    clr_user=${2:-'green'}
-    clr_root=${3:-'red'}
-    clr_vcs=${4:-'white'}
-    clr_job=${5:-'magenta'}
-    clr_histoff=${6:-'white'}
+    clr_path=${1:-'blue'}
+    clr_root=${2:-'red'}
+    clr_vcs=${3:-'green'}
+    clr_job=${4:-'magenta'}
+    clr_histoff=${5:-'white'}
 
     jobs="%F{$clr_job}%(1j. [%j] .)%f"
 
@@ -231,12 +230,12 @@ prompt_squiggle_pp_setup () {
     then
         base_prompt="%B%F{$clr_root}%m%k "
     else
-        base_prompt="%B%F{$clr_user}%n@%m%k "
+        base_prompt="%B "
     fi
 
     base_prompt="%S%F{$clr_histoff}%v%s%f${base_prompt}"
 
-    path_prompt="%F{$clr_prompt}%1~"
+    path_prompt="%F{$clr_path}%1~"
     # FIXME: get rid of multiple '%F{$clr_vcs}]'
     vcs_prompt='%F{$clr_vcs}${vcs_info_msg_0_:+${vcs_info_msg_0_} }%f'
     post_prompt="%b%f%k"
