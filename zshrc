@@ -205,39 +205,40 @@ promptinit
 
 setopt prompt_subst
 
-prompt_gentoovcs_help () {
+prompt_squiggle_pp_help () {
     cat <<'EOF'
-Standard Gentoo prompt theme with VCS info. Like original, it's color-scheme-able:
+A colourful prompt, with SCM info, jobs, return code and histoff marker.
+Pretty Prompt, named after Lupin Squiggle Sec'y pp
+Originally it was based on Gentoo prompt.  Colour-scheme-able:
 
-  prompt gentoovcs [<promptcolour> [<usercolour> [<rootcolour> [<vcsinfocolour>] \
-      [<jobnumcolor> [<histmarkcolour>]]]]]
+    prompt squiggle_pp [<promptcolour> [<usercolour> [<rootcolour> \
+                       [<vcsinfocolour> [<jobnumcolor> [<histmarkcolour>]]]]]]
 
 EOF
-
 }
 
-prompt_gentoovcs_setup () {
-    prompt_gentoo_prompt=${1:-'blue'}
-    prompt_gentoo_user=${2:-'green'}
-    prompt_gentoo_root=${3:-'red'}
-    prompt_gentoo_vcs=${4:-'white'}
-    prompt_gentoo_job=${5:-'magenta'}
-    prompt_gentoo_histoff=${6:-'white'}
+prompt_squiggle_pp_setup () {
+    clr_prompt=${1:-'blue'}
+    clr_user=${2:-'green'}
+    clr_root=${3:-'red'}
+    clr_vcs=${4:-'white'}
+    clr_job=${5:-'magenta'}
+    clr_histoff=${6:-'white'}
 
-    jobs="%F{$prompt_gentoo_job}%(1j. [%j] .)%f"
+    jobs="%F{$clr_job}%(1j. [%j] .)%f"
 
     if [ "$USER" = 'root' ]
     then
-        base_prompt="%B%F{$prompt_gentoo_root}%m%k "
+        base_prompt="%B%F{$clr_root}%m%k "
     else
-        base_prompt="%B%F{$prompt_gentoo_user}%n@%m%k "
+        base_prompt="%B%F{$clr_user}%n@%m%k "
     fi
 
-    base_prompt="%S%F{$prompt_gentoo_histoff}%v%s%f${base_prompt}"
+    base_prompt="%S%F{$clr_histoff}%v%s%f${base_prompt}"
 
-    path_prompt="%F{$prompt_gentoo_prompt}%1~"
-    # FIXME: get rid of multiple '%F{$prompt_gentoo_vcs}]'
-    vcs_prompt='%F{$prompt_gentoo_vcs}${vcs_info_msg_0_:+${vcs_info_msg_0_} }%f'
+    path_prompt="%F{$clr_prompt}%1~"
+    # FIXME: get rid of multiple '%F{$clr_vcs}]'
+    vcs_prompt='%F{$clr_vcs}${vcs_info_msg_0_:+${vcs_info_msg_0_} }%f'
     post_prompt="%b%f%k"
 
     PS1="${jobs}${base_prompt}${vcs_prompt}${path_prompt} %(0?.%#.%S%#%s) $post_prompt"
@@ -251,13 +252,13 @@ prompt_gentoovcs_setup () {
     zstyle ':vcs_info:*' unstagedstr '%U'
     zstyle ':vcs_info:hg:*' get-revision true
     zstyle ':vcs_info:hg:*' get-mq true
-    zstyle ':vcs_info:hg:*' formats '[☿:%u%b%m%%u%F{$prompt_gentoo_vcs}]'
-    zstyle ':vcs_info:hg:*' actionformats '[☿:%u%b%%u-%a%F{$prompt_gentoo_vcs}]'
+    zstyle ':vcs_info:hg:*' formats '[☿:%u%b%m%%u%F{$clr_vcs}]'
+    zstyle ':vcs_info:hg:*' actionformats '[☿:%u%b%%u-%a%F{$clr_vcs}]'
     zstyle ':vcs_info:hg:*' branchformat '%b'
     zstyle ':vcs_info:hg:*' patch-format '+%p'
     zstyle ':vcs_info:hg:*' nopatch-format ''
-    zstyle ':vcs_info:git:*' formats '[±:%u%b%%u%F{$prompt_gentoo_vcs}]'
-    zstyle ':vcs_info:git:*' actionformats '[±:%u%b%%u|%a%F{$prompt_gentoo_vcs}]'
+    zstyle ':vcs_info:git:*' formats '[±:%u%b%%u%F{$clr_vcs}]'
+    zstyle ':vcs_info:git:*' actionformats '[±:%u%b%%u|%a%F{$clr_vcs}]'
 
     add-zsh-hook precmd vcs_info
     add-zsh-hook precmd (){
@@ -274,7 +275,7 @@ prompt_gentoovcs_setup () {
 if [[ $TERM == "screen" ]] then
     prompt clint
 else
-    prompt_gentoovcs_setup "$@"
+    prompt_squiggle_pp_setup "$@"
 fi
 
 # zmv!
