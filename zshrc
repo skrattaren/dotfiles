@@ -223,6 +223,7 @@ prompt_squiggle_pp_setup () {
     clr_vcs=${3:-'green'}
     clr_job=${4:-'magenta'}
     clr_histoff=${5:-'white'}
+    clr_trail=${5:-'blue'}
 
     jobs="%F{$clr_job}%(1j. [%j] .)%f"
 
@@ -240,7 +241,7 @@ prompt_squiggle_pp_setup () {
     vcs_prompt='%F{$clr_vcs}${vcs_info_msg_0_:+${vcs_info_msg_0_} }%f'
     post_prompt="%b%f%k "
 
-    PS1="${jobs}${base_prompt}${path_prompt}${vcs_prompt}%B%F{$clr_path}%(0?.%#.%S%#%s)$post_prompt"
+    PS1="${jobs}${base_prompt}${path_prompt}${vcs_prompt}%B%F{$clr_trail}%(0?.%#.%S%#%s)$post_prompt"
     PS2="$base_prompt$path_prompt %_> $post_prompt"
     PS3="$base_prompt$path_prompt ?# $post_prompt"
 
