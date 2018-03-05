@@ -108,7 +108,7 @@ findhere() { find . -iname "*$1*" }
 
 # coloured and lessed diff
 udiff() {
-    diff -ur $1 $2 | pygmentize -g -O encoding=latin1 | less -FRXe
+    diff -ur $1 $2 | pygmentize -l diff | less -FRXe
 }
 
 # grep current kernel config for options
