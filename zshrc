@@ -218,9 +218,9 @@ EOF
 }
 
 prompt_squiggle_pp_setup () {
-    clr_path=${1:-'blue'}
+    clr_path=${1:-'green'}
     clr_root=${2:-'red'}
-    clr_vcs=${3:-'green'}
+    clr_vcs=${3:-'cyan'}
     clr_job=${4:-'magenta'}
     clr_histoff=${5:-'white'}
     clr_trail=${5:-'blue'}
