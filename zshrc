@@ -225,7 +225,7 @@ prompt_squiggle_pp_setup () {
     clr_histoff=${5:-'white'}
     clr_trail=${5:-'blue'}
 
-    jobs="%F{$clr_job}%(1j. [%j] .)%f"
+    jobs="%F{$clr_job}%(1j. [%j].)%f"
 
     if [ "$USER" = 'root' ]
     then
