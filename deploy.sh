@@ -4,13 +4,13 @@
 # i.e. symlink config files to those in this repo
 # backing up existing files etc.
 
-RDIR=$(dirname `readlink -fn $0`)
+RDIR=$(dirname "$(readlink -fn "$0")")
 
 excludes="deploy.sh ir_black_cscheme.vim"
 
 include() {
-    for i in ${excludes[@]}; do
-        if [ "$i" == "$1" ]; then
+    for i in $excludes; do
+        if [ "$i" = "$1" ]; then
             return 1
         fi
     done
@@ -34,7 +34,7 @@ symlinkit() {
     ln -s "$SRC" "$TRGT"
 }
 
-if [[ $EUID -ne 0 ]]; then
+if [ "$(id -u)" = 0 ]; then
     FILES=$(ls "$RDIR")
 else
     FILES="vimrc zshrc"
