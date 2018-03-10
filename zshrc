@@ -5,6 +5,8 @@ else
     eval `dircolors -b /etc/DIR_COLORS`
 fi
 
+fpath=( ~/.zsh/fpath $fpath )
+
 # history settings
 HISTFILE=~/.histfile
 HISTSIZE=3000
@@ -205,77 +207,10 @@ promptinit
 
 setopt prompt_subst
 
-prompt_squiggle_pp_help () {
-    cat <<'EOF'
-A colourful prompt, with SCM info, jobs, return code and histoff marker.
-Pretty Prompt, named after Lupin Squiggle Sec'y pp
-Originally it was based on Gentoo prompt.  Colour-scheme-able:
-
-    prompt squiggle_pp [<pathcolour> [<rootcolour> [<vcsinfocolour> \
-                       [<jobnumcolor> [<histmarkcolour>]]]]]
-
-EOF
-}
-
-prompt_squiggle_pp_setup () {
-    clr_path=${1:-'green'}
-    clr_root=${2:-'red'}
-    clr_vcs=${3:-'cyan'}
-    clr_job=${4:-'magenta'}
-    clr_histoff=${5:-'white'}
-    clr_trail=${5:-'blue'}
-
-    jobs="%F{$clr_job}%(1j. [%j].)%f"
-
-    if [ "$USER" = 'root' ]
-    then
-        base_prompt="%B%F{$clr_root}%m%k "
-    else
-        base_prompt="%B "
-    fi
-
-    base_prompt="%S%F{$clr_histoff}%v%s%f${base_prompt}"
-
-    path_prompt="%F{$clr_path}%(5~|%-1~/…/%3~|%4~) "
-    # FIXME: get rid of multiple '%F{$clr_vcs}]'
-    vcs_prompt='%F{$clr_vcs}${vcs_info_msg_0_:+${vcs_info_msg_0_} }%f'
-    post_prompt="%b%f%k "
-
-    PS1="${jobs}${base_prompt}${path_prompt}${vcs_prompt}%B%F{$clr_trail}%(0?.%#.%S%#%s)$post_prompt"
-    PS2="$base_prompt$path_prompt %_> $post_prompt"
-    PS3="$base_prompt$path_prompt ?# $post_prompt"
-
-    # vcs_info options
-    autoload -Uz vcs_info
-    zstyle ':vcs_info:*' enable git svn hg
-    zstyle ':vcs_info:*' check-for-changes true
-    zstyle ':vcs_info:*' unstagedstr '%U'
-    zstyle ':vcs_info:hg:*' get-revision true
-    zstyle ':vcs_info:hg:*' get-mq true
-    zstyle ':vcs_info:hg:*' formats '[☿:%u%b%m%%u%F{$clr_vcs}]'
-    zstyle ':vcs_info:hg:*' actionformats '[☿:%u%b%%u-%a%F{$clr_vcs}]'
-    zstyle ':vcs_info:hg:*' branchformat '%b'
-    zstyle ':vcs_info:hg:*' patch-format '+%p'
-    zstyle ':vcs_info:hg:*' nopatch-format ''
-    zstyle ':vcs_info:git:*' formats '[±:%u%b%%u%F{$clr_vcs}]'
-    zstyle ':vcs_info:git:*' actionformats '[±:%u%b%%u|%a%F{$clr_vcs}]'
-
-    add-zsh-hook precmd vcs_info
-    add-zsh-hook precmd (){
-        if [[ -z $HISTFILE ]]; then
-            psvar[1]=" H "
-        else
-            psvar[1]=""
-        fi
-        print -Pn "\e]0;%~ %#\a"
-        echo -ne '\a'
-    }
-}
-
 if [[ $TERM == "screen" ]] then
     prompt clint
 else
-    prompt_squiggle_pp_setup "$@"
+    prompt squiggle_pp
 fi
 
 # zmv!
