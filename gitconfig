@@ -12,3 +12,4 @@
 [alias]
     ppull = pull -p
     root = rev-parse --show-toplevel
+    st = status
