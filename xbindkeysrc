@@ -4,6 +4,9 @@
 "dmenu_run"
   Mod4 + d
 
+"mpv --no-terminal $(xclip -o)"
+ Mod4 + Shift + o
+
 "mpc toggle"
   XF86AudioPlay
 
