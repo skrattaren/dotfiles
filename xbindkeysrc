@@ -14,7 +14,7 @@
   XF86AudioStop
 
 "mpc stop"
-  shift + XF86AudioPlay
+  Shift + XF86AudioPlay
 
 "mpc prev"
   XF86AudioPrev
@@ -26,7 +26,7 @@
   XF86AudioMute
 
 "mpc single off"
-  shift + XF86AudioMute
+  Shift + XF86AudioMute
 
 "amixer set Master 3%+"
   XF86AudioRaiseVolume
