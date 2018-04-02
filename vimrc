@@ -77,9 +77,14 @@ set background=dark
 if has('gui_running')
     set guioptions=a
     colorscheme solarized
-    set guifont=xos4\ Terminus\ 11
     set cursorcolumn
     set mouse="a"
+    if has("gui_macvim")
+        set macligatures
+        set guifont=Fira\ Code:h16
+    else
+        set guifont=xos4\ Terminus\ 11
+    endif
 else
     set t_Co=16
     colorscheme ir_black
