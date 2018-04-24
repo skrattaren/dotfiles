@@ -74,15 +74,13 @@ set pastetoggle=<F2>
 nnoremap <leader>w :%s/\s\+$//<cr>:let @/=''<CR>
 
 set background=dark
+colorscheme solarized
 if has('gui_running')
     set guioptions=a
-    colorscheme solarized
     set guifont=xos4\ Terminus\ 11
     set cursorcolumn
     set mouse="a"
 else
-    set t_Co=16
-    colorscheme ir_black
     set mouse=
 endif
 
