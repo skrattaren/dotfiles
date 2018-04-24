@@ -5,10 +5,10 @@
   Mod4 + d
 
 "mpv --no-terminal $(xclip -o)"
- Mod4 + Shift + o
+  Mod4 + Shift + o
 
 "maim -s -f png | xclip -t image/png -selection clipboard"
- Control + Shift + Alt + 4
+  Control + Shift + Alt + 4
 
 "mpc toggle"
   XF86AudioPlay
