@@ -77,9 +77,14 @@ set background=dark
 colorscheme solarized
 if has('gui_running')
     set guioptions=a
-    set guifont=xos4\ Terminus\ 11
     set cursorcolumn
     set mouse="a"
+    if has("gui_macvim")
+        set macligatures
+        set guifont=Fira\ Code:h16
+    else
+        set guifont=xos4\ Terminus\ 11
+    endif
 else
     set mouse=
 endif
@@ -110,7 +115,11 @@ let g:yankring_replace_n_pkey = '<m-p>'
 let g:yankring_history_dir = "$HOME/.vim"
 
 " comment with extra space
-let NERDSpaceDelims=1
+let g:NERDSpaceDelims = 1
+" use `#` for Python instead of `# ` (WTF?!)
+let g:NERDAltDelims_python = 1
+" don't follow indentation
+let g:NERDDefaultAlign = 'left'
 
 " check and use the_silver_searcher or `ripgrep`
 " TODO: prefer `rg` when its hgignore support is ready
