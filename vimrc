@@ -117,7 +117,11 @@ let g:yankring_replace_n_pkey = '<m-p>'
 let g:yankring_history_dir = "$HOME/.vim"
 
 " comment with extra space
-let NERDSpaceDelims=1
+let g:NERDSpaceDelims = 1
+" use `#` for Python instead of `# ` (WTF?!)
+let g:NERDAltDelims_python = 1
+" don't follow indentation
+let g:NERDDefaultAlign = 'left'
 
 " check and use the_silver_searcher or `ripgrep`
 " TODO: prefer `rg` when its hgignore support is ready
