@@ -74,9 +74,9 @@ set pastetoggle=<F2>
 nnoremap <leader>w :%s/\s\+$//<cr>:let @/=''<CR>
 
 set background=dark
+colorscheme solarized
 if has('gui_running')
     set guioptions=a
-    colorscheme solarized
     set cursorcolumn
     set mouse="a"
     if has("gui_macvim")
@@ -86,8 +86,6 @@ if has('gui_running')
         set guifont=xos4\ Terminus\ 11
     endif
 else
-    set t_Co=16
-    colorscheme ir_black
     set mouse=
 endif
 
