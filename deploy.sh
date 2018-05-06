@@ -6,7 +6,7 @@
 
 RDIR=$(dirname "$(readlink -fn "$0")")
 
-excludes="deploy.sh ir_black_cscheme.vim"
+excludes="deploy.sh"
 
 include() {
     for i in $excludes; do
@@ -44,7 +44,6 @@ VIMCSDIR="$HOME/.vim/colors"
 if [ ! -d "$VIMCSDIR" ]; then
     mkdir -p "$VIMCSDIR"
 fi
-symlinkit "$RDIR/ir_black_cscheme.vim" "$VIMCSDIR/ir_black.vim"
 
 for f in $FILES; do
     if include "$f"; then
