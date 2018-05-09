@@ -135,3 +135,6 @@ elseif executable('rg')
   set grepprg=rg\ --vimgrep
   set grepformat=%f:%l:%c:%m
 endif
+
+" ALE settings
+nmap <silent> <leader>e <Plug>(ale_next_wrap)
