@@ -76,6 +76,7 @@ alias wget="wget --continue --content-disposition"
 alias grep="grep --colour"
 alias qmv="qmv --format=do"
 alias qcp="qcp --format=do"
+alias aria2c="aria2c -x8 -k10M"
 
 if hash mpv 2>/dev/null; then
     MPLAYER="mpv"
