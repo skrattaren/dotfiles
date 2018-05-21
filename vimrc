@@ -137,4 +137,6 @@ elseif executable('rg')
 endif
 
 " ALE settings
+let g:ale_python_pylint_options = "-d broad-except"
+" ALE mappings
 nmap <silent> <leader>e <Plug>(ale_next_wrap)
