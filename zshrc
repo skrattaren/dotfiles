@@ -179,7 +179,11 @@ toggle_history() {
     else
         HISTFILE=~/.histfile
     fi
+    zle accept-line
 }
+
+zle -N toggle_history
+bindkey "^O" toggle_history
 
 # convert and read rST document in browser
 rstread() {
