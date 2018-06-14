@@ -27,6 +27,8 @@ unsetopt equals
 unsetopt hup
 unsetopt nomatch
 
+unsetopt multifuncdef
+
 bindkey -v
 
 # the following lines were added by compinstall
