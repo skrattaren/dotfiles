@@ -42,18 +42,15 @@ bindkey "^[[2~" yank
 bindkey "^[[3~" delete-char
 bindkey "^[[5~" history-beginning-search-backward
 bindkey "^[[6~" history-beginning-search-forward
-bindkey "^[[7~" beginning-of-line
-bindkey "^[[8~" end-of-line
 bindkey "^[[A"  up-line-or-history
 bindkey "^[[B"  down-line-or-history
-bindkey "^[[H"  beginning-of-line
-bindkey "^[[F"  end-of-line
 bindkey "^[e"   expand-cmd-path
-bindkey "^[[1~" beginning-of-line
-bindkey "^[[4~" end-of-line
 bindkey " "     magic-space
 bindkey "^[u"   undo
 bindkey "^[r"   redo
+
+bindkey "${terminfo[khome]}" beginning-of-line
+bindkey "${terminfo[kend]}" end-of-line
 
 # a wee bitty bit of emacs
 bindkey "^A"    beginning-of-line
