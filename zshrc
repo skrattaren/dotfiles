@@ -42,12 +42,24 @@ bindkey "^[[2~" yank
 bindkey "^[[3~" delete-char
 bindkey "^[[5~" history-beginning-search-backward
 bindkey "^[[6~" history-beginning-search-forward
-bindkey "^[[A"  up-line-or-history
-bindkey "^[[B"  down-line-or-history
 bindkey "^[e"   expand-cmd-path
 bindkey " "     magic-space
 bindkey "^[u"   undo
 bindkey "^[r"   redo
+
+# Make sure the terminal is in application mode, when zle is
+# active. Only then are the values from $terminfo valid.
+# ( http://zshwiki.org/home/zle/bindkeys )
+if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
+    function zle-line-init () {
+        echoti smkx
+    }
+    function zle-line-finish () {
+        echoti rmkx
+    }
+    zle -N zle-line-init
+    zle -N zle-line-finish
+fi
 
 bindkey "${terminfo[khome]}" beginning-of-line
 bindkey "${terminfo[kend]}" end-of-line
