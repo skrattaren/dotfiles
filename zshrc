@@ -182,7 +182,7 @@ digest_compile_latest() {
     ebuild $latest_ebuild digest clean install
 }
 
-toggle_history() {
+zle_toggle_history() {
     if [[ -n $HISTFILE ]]; then
         unset HISTFILE
     else
@@ -191,8 +191,8 @@ toggle_history() {
     zle accept-line
 }
 
-zle -N toggle_history
-bindkey "^O" toggle_history
+zle -N zle_toggle_history
+bindkey "^O" zle_toggle_history
 
 # convert and read rST document in browser
 rstread() {
