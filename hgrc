@@ -1,5 +1,4 @@
 [extensions]
-color =
 convert =
 extdiff =
 fetch =
@@ -20,6 +19,7 @@ hgext.hgview = !
 username = Nikolaj Šujskij <skrattaren@yandex.ru>
 merge = kdiff3
 ignore = ~/.hgignore
+tweakdefaults = True
 
 [extdiff]
 cmd.kdiff = kdiff3
@@ -43,13 +43,10 @@ tls = starttls
 username = skrattaren
 port = 587
 
-[diff]
-git = True
-
 [alias]
 drop = revert --no-backup
 upull = pull --update
-tipp = tip -p
+tipp = log --patch --limit 1 .
 smartrebase = rebase -b 'head() and branch(.) and draft()'
                      -d 'head() and branch(.) and public()'
 postdiff = !$HG diff $@ | lodgeit -l diff
@@ -57,6 +54,6 @@ qtip = log --rev qtip --patch
 today = log -u skrattaren -u sterkrig -u krigstask --date ">0:00"
 
 [pager]
-attend = annotate, diff, glog, help, log, qdiff, tip
+attend = annotate, diff, glog, help, log, qdiff
 pager = less --raw-control-chars --no-init --quit-if-one-screen --quit-at-eof
 
