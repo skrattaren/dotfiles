@@ -311,7 +311,7 @@ playlist_display_mode = columns
 #
 #seek_time = 1
 #
-#volume_change_step = 2
+volume_change_step = 3
 #
 #autocenter_mode = no
 #
