@@ -37,3 +37,8 @@
 "amixer set Master 3%-"
   XF86AudioLowerVolume
 
+"/home/sterkrig/dev/scripties/musik/mpd_auto_rgain.sh"
+  Shift + XF86AudioRaiseVolume
+
+"/home/sterkrig/dev/scripties/musik/mpd_auto_rgain.sh"
+  Shift + XF86AudioLowerVolume
