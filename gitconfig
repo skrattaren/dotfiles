@@ -13,3 +13,4 @@
     ppull = pull -p
     root = rev-parse --show-toplevel
     st = status
+    fbrpush = !git push $(git rev-parse --abbrev-ref=loose --symbolic-full-name @{upstream} | sed 's:/: +:')
