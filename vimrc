@@ -63,6 +63,7 @@ set imsearch=0
 set spelllang=ru_yo,en_gb
 autocmd FileType {rst,markdown} setlocal spell formatoptions+=t
 autocmd FileType crontab setlocal backupcopy=yes
+autocmd FileType yaml setlocal shiftwidth=2 softtabstop=2 tabstop=2
 
 " press space to clear search highlighting
 nnoremap <silent> <Space> :noh<CR>
