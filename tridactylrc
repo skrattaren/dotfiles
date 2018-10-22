@@ -1,0 +1,10 @@
+" GUI options
+guiset_quiet tabs autohide
+guiset_quiet navbar autohide
+
+" quiet sanity
+fixamo_quiet
+
+" `about:config`
+
+" vim: set filetype=vim:
