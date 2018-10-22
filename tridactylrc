@@ -6,5 +6,7 @@ guiset_quiet navbar autohide
 fixamo_quiet
 
 " `about:config`
+"set! signon.autofillForms=false
+"set! extensions.pocket.enabled=false
 
 " vim: set filetype=vim:
