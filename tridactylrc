@@ -5,6 +5,10 @@ guiset_quiet navbar autohide
 " quiet sanity
 fixamo_quiet
 
+" I tried to get used to defaults, and I failed
+bind s fillcmdline tabopen search
+bind S fillcmdline open search
+
 " `about:config`
 "set! signon.autofillForms=false
 "set! extensions.pocket.enabled=false
