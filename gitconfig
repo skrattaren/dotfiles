@@ -9,6 +9,8 @@
     editor = vim
     excludesfile = ~/.gitignore
     pager = less -RFX -x4
+[merge]
+    renames=false
 [alias]
     ppull = pull -p
     root = rev-parse --show-toplevel
