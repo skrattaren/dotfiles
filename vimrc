@@ -12,6 +12,9 @@ set ignorecase smartcase
 set gdefault
 set showmatch
 
+" split windows
+set splitbelow splitright
+
 if has('nvim')
     set inccommand=split
 endif
