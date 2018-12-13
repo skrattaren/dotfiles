@@ -4,7 +4,7 @@
 "dmenu_run"
   Mod4 + d
 
-"mpv --no-terminal $(xclip -o)"
+"mpv --no-terminal $(xclip -out -selection clipboard)"
   Mod4 + Shift + o
 
 "maim -s -f png | xclip -t image/png -selection clipboard"
