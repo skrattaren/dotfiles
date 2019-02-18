@@ -12,7 +12,7 @@
 [merge]
     renames=false
 [alias]
-    ppull = pull -p
+    ppull = pull -p --recurse-submodules
     root = rev-parse --show-toplevel
     st = status
     fbrpush = !git push $(git rev-parse --abbrev-ref=loose --symbolic-full-name @{upstream} | sed 's:/: +:')
