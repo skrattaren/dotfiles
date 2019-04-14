@@ -1,6 +1,9 @@
 def_key "^"
   replay_song
 
+def_key "d"
+  delete_playlist_items
+
 def_key "S"
   toggle_single
 
