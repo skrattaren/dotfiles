@@ -218,6 +218,15 @@ evawesome () {
     $EDITOR "$EVALFILE" && cat "$EVALFILE" | awesome-client
 }
 
+# open files using `skim` and `ripgrep`
+skopen() {
+    local prgrm path_
+    prgrm="$1"
+    path_="${2:-.}"
+    SKIM_DEFAULT_COMMAND="rg --files $path_" \
+        sk --multi --print0 | xargs -0 "$prgrm"
+}
+
 # prompt
 autoload -U promptinit
 promptinit
