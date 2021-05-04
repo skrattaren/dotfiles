@@ -86,7 +86,7 @@ if has('gui_running')
     if has("gui_macvim")
         set macligatures
         set guifont=Fira\ Code:h16
-    else
+    elseif ! has("gui_vimr")
         set guifont=xos4\ Terminus\ 11
     endif
 else
