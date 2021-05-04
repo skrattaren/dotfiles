@@ -1,6 +1,8 @@
 " GUI options
 guiset_quiet tabs autohide
 guiset_quiet navbar autohide
+" can we fix overlapping of link popup and cmd line? =(
+" guiset_quiet hoverlink top-right
 
 " quiet sanity
 fixamo_quiet
@@ -8,9 +10,11 @@ fixamo_quiet
 " I tried to get used to defaults, and I failed
 bind s fillcmdline tabopen search
 bind S fillcmdline open search
+bind --mode=visual s composite js document.getSelection().toString() | fillcmdline tabopen search
+bind --mode=visual S composite js document.getSelection().toString() | fillcmdline open search
 
 " `about:config`
 "set! signon.autofillForms=false
 "set! extensions.pocket.enabled=false
 
-" vim: set filetype=vim:
+" vim: filetype=vim
