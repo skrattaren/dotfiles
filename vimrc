@@ -105,10 +105,9 @@ nnoremap <leader>1 yypVr
 " wrap current paragraph
 nnoremap <leader>P vipgq
 
-" CtrlP stuff
-nmap <leader>b :CtrlPBuffer<CR>
-nmap <leader>rf :CtrlPMRU<CR>
-let g:ctrlp_working_path_mode = 'r'
+" FZF/Skim stuff
+nnoremap <silent> <leader>f :Files<CR>
+nnoremap <silent> <leader>b :Buffers<CR>
 
 
 " don't let YankRing conflict with CtrlP
