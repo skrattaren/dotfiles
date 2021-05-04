@@ -11,6 +11,14 @@
     pager = less -RFX -x4
 [merge]
     renames=false
+    tool = splice
+[mergetool "splice"]
+    cmd = "gvim -f $BASE $LOCAL $REMOTE $MERGED -c 'SpliceInit'"
+    trustExitCode = true
+[difftool "kdiff3"]
+    cmd = kdiff3 $LOCAL $REMOTE --output $LOCAL
+[icdiff]
+    options = --no-bold
 [alias]
     ppull = pull -p --recurse-submodules
     upush = push --set-upstream
