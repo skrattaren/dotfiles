@@ -26,3 +26,11 @@
     st = status
     fbrpush = !git push $(git rev-parse --abbrev-ref=loose --symbolic-full-name @{upstream} | sed 's:/: +:')
     breset = !git reset --hard $(git rev-parse --abbrev-ref --symbolic-full-name @{u})
+    sup = submodule update
+[pull]
+    rebase = false
+    ff = only
+[init]
+    defaultBranch = main
+
+# vim:filetype=gitconfig
