@@ -117,27 +117,12 @@ let g:yankring_replace_n_pkey = '<m-p>'
 " don't litter my $HOME
 let g:yankring_history_dir = "$HOME/.vim"
 
-" comment with extra space
-let g:NERDSpaceDelims = 1
-" use `#` for Python instead of `# ` (WTF?!)
-let g:NERDAltDelims_python = 1
-" don't follow indentation
-let g:NERDDefaultAlign = 'left'
-
-" check and use the_silver_searcher or `ripgrep`
-" TODO: prefer `rg` when its hgignore support is ready
-" FIXME: DRY
-if executable('ag')
-  let g:ctrlp_user_command = 'ag --nocolor -g "" %s'
-  let g:ackprg = 'ag --vimgrep'
-  set grepprg=ag\ --vimgrep
-  set grepformat=%f:%l:%c:%m
-elseif executable('rg')
-  let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
-  let g:ackprg = 'rg --vimgrep'
-  set grepprg=rg\ --vimgrep
-  set grepformat=%f:%l:%c:%m
-endif
+" Grepper settings
+let g:grepper = {}
+let g:grepper.tools = ['rg', 'ag', 'pt', 'ack', 'git', 'grep']
+" shove results into location list
+" let g:grepper.quickfix = 0
+command! -nargs=+ -complete=file Rg Grepper -noprompt -tool rg -query <args>
 
 " ALE settings
 let g:ale_python_pylint_options = "-d broad-except"
