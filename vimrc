@@ -129,6 +129,7 @@ let g:ale_python_pylint_options = "-d broad-except"
 " let g:ale_linters = {'python': ['pycodestyle', 'pylint', 'flake8'],}
 " ALE mappings
 nmap <silent> <leader>e <Plug>(ale_next_wrap)
+nmap <silent> <leader>E <Plug>(ale_previous_wrap)
 
 " Deoplete settings
 let g:deoplete#enable_at_startup = 1
