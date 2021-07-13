@@ -13,6 +13,9 @@ bind S fillcmdline open search
 bind --mode=visual s composite js document.getSelection().toString() | fillcmdline tabopen search
 bind --mode=visual S composite js document.getSelection().toString() | fillcmdline open search
 
+" let's not
+unbind --mode=normal M
+
 " `about:config`
 "set! signon.autofillForms=false
 "set! extensions.pocket.enabled=false
