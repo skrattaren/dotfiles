@@ -106,6 +106,7 @@ nnoremap <leader>1 yypVr
 nnoremap <leader>P vipgq
 
 " FZF/Skim stuff
+let $FZF_DEFAULT_COMMAND = "rg --files"
 nnoremap <silent> <leader>f :Files<CR>
 nnoremap <silent> <leader>b :Buffers<CR>
 
