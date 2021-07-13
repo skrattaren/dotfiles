@@ -127,6 +127,7 @@ command! -nargs=+ -complete=file Rg Grepper -noprompt -tool rg -query <args>
 
 " ALE settings
 let g:ale_python_pylint_options = "-d broad-except"
+let g:ale_java_checkstyle_config = '~/.config/checkstyle.xml'
 " let g:ale_linters = {'python': ['pycodestyle', 'pylint', 'flake8'],}
 " ALE mappings
 nmap <silent> <leader>e <Plug>(ale_next_wrap)
