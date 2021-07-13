@@ -121,6 +121,8 @@ alias eixr='eix --cache-file /var/cache/eix/remote.eix'
 # `find` things easily
 findhere() { find . -iname "*$1*" }
 
+mkcd() { mkdir -p "$1" && cd "$1" }
+
 # coloured and lessed diff
 udiff() {
     diff -ur $1 $2 | pygmentize -l diff | less -FRXe
@@ -212,15 +214,6 @@ evawesome () {
     local EVALFILE
     EVALFILE="$HOME/.cache/awesome/eval.lua"
     $EDITOR "$EVALFILE" && cat "$EVALFILE" | awesome-client
-}
-
-# open files using `skim` and `ripgrep`
-skopen() {
-    local prgrm path_
-    prgrm="$1"
-    path_="${2:-.}"
-    SKIM_DEFAULT_COMMAND="rg --files $path_" \
-        sk --multi --print0 | xargs -0 "$prgrm"
 }
 
 # prompt
