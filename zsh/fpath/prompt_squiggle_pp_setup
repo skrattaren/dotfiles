@@ -1,21 +1,20 @@
-prompt_squiggle_pp_help () {
+prompt_squiggle_pp_help() {
     cat <<'EOF'
 A colourful prompt, with SCM info, jobs, return code and histoff marker.
 Pretty Prompt, named after Lupin Squiggle Sec'y pp
 Originally it was based on Gentoo prompt.  Colour-scheme-able:
 
     prompt squiggle_pp [<pathcolour> [<rootcolour> [<vcsinfocolour> \
-                       [<jobnumcolor> [<histmarkcolour>]]]]]
+                       [<jobnumcolour> [<trailing%colour>]]]]]
 
 EOF
 }
 
-prompt_squiggle_pp_setup () {
+prompt_squiggle_pp_setup() {
     clr_path=${1:-'green'}
     clr_root=${2:-'red'}
     clr_vcs=${3:-'cyan'}
     clr_job=${4:-'magenta'}
-    clr_histoff=${5:-'white'}
     clr_trail=${5:-'blue'}
 
     jobs="%F{$clr_job}%(1j. [%j].)%f"
@@ -27,14 +26,14 @@ prompt_squiggle_pp_setup () {
         base_prompt="%B "
     fi
 
-    base_prompt="%S%F{$clr_histoff}%v%s%f${base_prompt}"
+    hist_mark="%S%v%s%f"
 
     path_prompt="%F{$clr_path}%(5~|%-1~/…/%3~|%4~) "
     # FIXME: get rid of multiple '%F{$clr_vcs}]'
     vcs_prompt='%F{$clr_vcs}${vcs_info_msg_0_:+${vcs_info_msg_0_} }%f'
     post_prompt="%b%f%k "
 
-    PS1="${jobs}${base_prompt}${path_prompt}${vcs_prompt}%B%F{$clr_trail}%(0?.%#.%S%#%s)$post_prompt"
+    PS1="${hist_mark}${jobs}${base_prompt}${path_prompt}${vcs_prompt}%B%F{$clr_trail}%(0?.%#.%S%#%s)$post_prompt"
     PS2="$base_prompt$path_prompt %_> $post_prompt"
     PS3="$base_prompt$path_prompt ?# $post_prompt"
 
@@ -54,7 +53,7 @@ prompt_squiggle_pp_setup () {
     zstyle ':vcs_info:git:*' actionformats '[±:%u%b%%u|%a%F{$clr_vcs}]'
 
     add-zsh-hook precmd vcs_info
-    add-zsh-hook precmd (){
+    add-zsh-hook precmd() {
         if [[ -z $HISTFILE ]]; then
             psvar[1]=" H "
         else
