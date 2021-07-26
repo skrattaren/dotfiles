@@ -22,6 +22,10 @@ if has('nvim')
     set inccommand=split
 endif
 
+if ! has('nvim')
+    set undodir=~/.vim/undodir
+endif
+
 nnoremap / /\v
 vnoremap / /\v
 
@@ -43,7 +47,6 @@ vnoremap <F1> <ESC>
 
 set nobackup noswapfile
 set undofile
-set undodir=~/.vim/undodir
 
 autocmd FocusLost * :wa
 
