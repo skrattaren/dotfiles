@@ -2,6 +2,9 @@ filetype plugin on
 filetype indent on
 syntax on
 
+let mapleader = ","
+nmap \ <leader>
+
 set expandtab shiftwidth=4 softtabstop=4 tabstop=4
 set list
 set listchars=tab:▹\ ,eol:↵,trail:▿
