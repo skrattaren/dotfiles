@@ -13,6 +13,20 @@ bind S fillcmdline open search
 bind --mode=visual s composite js document.getSelection().toString() | fillcmdline tabopen search
 bind --mode=visual S composite js document.getSelection().toString() | fillcmdline open search
 
+bind J tabnext
+bind K tabprev
+bind gp buffer #
+
+bind ,t fillcmdline tabopen -b
+bind ,T current_url tabopen -b
+
+bind ,j tabmove +1
+bind ,k tabmove -1
+bind ,$ tabmove $
+bind ,m tabpush
+
+bind ,f hint -t
+
 " let's not
 unbind --mode=normal M
 
