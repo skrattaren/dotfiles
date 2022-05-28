@@ -29,11 +29,13 @@ prompt_squiggle_pp_setup() {
     hist_mark="%S%v%s%f"
 
     path_prompt="%F{$clr_path}%(5~|%-1~/…/%3~|%4~) "
-    # FIXME: get rid of multiple '%F{$clr_vcs}]'
     vcs_prompt='%F{$clr_vcs}${vcs_info_msg_0_:+${vcs_info_msg_0_} }%f'
     post_prompt="%b%f%k "
 
-    PS1="${hist_mark}${jobs}${base_prompt}${path_prompt}${vcs_prompt}%B%F{$clr_trail}%(0?.%#.%S%#%s)$post_prompt"
+    PS1="${hist_mark}${jobs}${base_prompt}${path_prompt}${vcs_prompt}"
+    # NEWLINE=$'\n'
+    # PS1="${PS1}%B%F{$clr_trail}%(7l.${NEWLINE}.)%(0?.%#.%S%#%s)$post_prompt"
+    PS1="${PS1}%B%F{$clr_trail}%(0?.%#.%S%#%s)$post_prompt"
     PS2="$base_prompt$path_prompt %_> $post_prompt"
     PS3="$base_prompt$path_prompt ?# $post_prompt"
 
@@ -44,13 +46,13 @@ prompt_squiggle_pp_setup() {
     zstyle ':vcs_info:*' unstagedstr '%U'
     zstyle ':vcs_info:hg:*' get-revision true
     zstyle ':vcs_info:hg:*' get-mq true
-    zstyle ':vcs_info:hg:*' formats '[☿:%u%b%m%%u%F{$clr_vcs}]'
-    zstyle ':vcs_info:hg:*' actionformats '[☿:%u%b%%u-%a%F{$clr_vcs}]'
+    zstyle ':vcs_info:hg:*' formats '[☿:%u%b%m%%u]'
+    zstyle ':vcs_info:hg:*' actionformats '[☿:%u%b%%u-%a]'
     zstyle ':vcs_info:hg:*' branchformat '%b'
     zstyle ':vcs_info:hg:*' patch-format '+%p'
     zstyle ':vcs_info:hg:*' nopatch-format ''
-    zstyle ':vcs_info:git:*' formats '[±:%u%b%%u%F{$clr_vcs}]'
-    zstyle ':vcs_info:git:*' actionformats '[±:%u%b%%u|%a%F{$clr_vcs}]'
+    zstyle ':vcs_info:git:*' formats '[±:%u%b%%u]'
+    zstyle ':vcs_info:git:*' actionformats '[±:%u%b%%u|%a]'
 
     add-zsh-hook precmd vcs_info
     add-zsh-hook precmd() {
