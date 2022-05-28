@@ -43,5 +43,7 @@ unbindurl bazqux\.com\/i r
 " `about:config`
 "set! signon.autofillForms=false
 "set! extensions.pocket.enabled=false
+" required for `MrOtherGuy/firefox-csshacks`
+"set! toolkit.legacyUserProfileCustomizations.stylesheets=true
 
 " vim: filetype=vim
