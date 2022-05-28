@@ -30,6 +30,16 @@ bind ,f hint -t
 " let's not
 unbind --mode=normal M
 
+" let's allow some keys
+unbindurl bazqux\.com\/i d
+unbindurl bazqux\.com\/i m
+unbindurl bazqux\.com\/i d
+unbindurl bazqux\.com\/i v
+unbindurl bazqux\.com\/i b
+unbindurl bazqux\.com\/i j
+unbindurl bazqux\.com\/i k
+unbindurl bazqux\.com\/i r
+
 " `about:config`
 "set! signon.autofillForms=false
 "set! extensions.pocket.enabled=false
