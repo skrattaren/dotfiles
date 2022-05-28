@@ -47,3 +47,4 @@ unbindurl bazqux\.com\/i r
 "set! toolkit.legacyUserProfileCustomizations.stylesheets=true
 
 " vim: filetype=vim
+" vim: filetype=tridactyl
