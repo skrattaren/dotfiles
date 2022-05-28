@@ -10,8 +10,10 @@
     excludesfile = ~/.gitignore
     pager = less -RFX -x4
 [merge]
-    renames=false
+    renames = false
     tool = splice
+[mergetool]
+    keepBackup = false
 [mergetool "splice"]
     cmd = "gvim -f $BASE $LOCAL $REMOTE $MERGED -c 'SpliceInit'"
     trustExitCode = true
