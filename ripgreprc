@@ -1,5 +1,6 @@
+--type-add=kt:include:kotlin
 --colors=line:fg:yellow
-
 --smart-case
 --max-columns=666
+# lots of dotfiles in repos
 --hidden

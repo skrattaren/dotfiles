@@ -1,9 +1,1 @@
-*.png
-*.ico
-*.ttf
-*.woff
-*.svg?
-scripts/sql/updates/archive
-output
-cache
 .git
