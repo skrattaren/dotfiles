@@ -19,7 +19,7 @@ prompt_squiggle_pp_setup() {
 
     jobs="%F{$clr_job}%(1j. [%j].)%f"
 
-    if [ "$USER" = 'root' ]
+    if [[ "$USER" = 'root' ]]
     then
         base_prompt="%B%F{$clr_root}%m%k "
     else
@@ -33,15 +33,13 @@ prompt_squiggle_pp_setup() {
     post_prompt="%b%f%k "
 
     PS1="${hist_mark}${jobs}${base_prompt}${path_prompt}${vcs_prompt}"
-    # NEWLINE=$'\n'
-    # PS1="${PS1}%B%F{$clr_trail}%(7l.${NEWLINE}.)%(0?.%#.%S%#%s)$post_prompt"
     PS1="${PS1}%B%F{$clr_trail}%(0?.%#.%S%#%s)$post_prompt"
     PS2="$base_prompt$path_prompt %_> $post_prompt"
     PS3="$base_prompt$path_prompt ?# $post_prompt"
 
     # vcs_info options
     autoload -Uz vcs_info
-    zstyle ':vcs_info:*' enable git svn hg
+    zstyle ':vcs_info:*' enable git hg
     zstyle ':vcs_info:*' check-for-changes true
     zstyle ':vcs_info:*' unstagedstr '%U'
     zstyle ':vcs_info:hg:*' get-revision true
