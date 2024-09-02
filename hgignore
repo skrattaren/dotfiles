@@ -1,8 +1,0 @@
-syntax:glob
-
-*.e4p
-*.pyc
-.eric?project
-.*.swp
-.pida-metadata
-.ropeproject
