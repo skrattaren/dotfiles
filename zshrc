@@ -192,6 +192,12 @@ rstread() {
     echo file://$htmlfile
 }
 
+add_logseq_entry() {
+    local LS_DIR="$HOME/Documents/logseq/journals"
+    local ls_date=$(date +%Y_%m_%d -d "${*}")
+    echo "<Write here>" >> "$LS_DIR/${ls_date}.md"
+}
+
 # auto-completion from `cmd --help`
 compdef _gnu_generic ag
 
