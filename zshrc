@@ -99,6 +99,8 @@ alias feht="$feh_base -t"
 alias feh="$feh_base -Y"
 unset feh_base
 
+alias imv="imv-wayland"
+
 # alias for eix'ing in in separate cache for remotes
 alias eixr='eix --cache-file /var/cache/eix/remote.eix'
 # (update eix-remote cache via cron)
