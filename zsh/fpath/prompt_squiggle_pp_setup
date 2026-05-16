@@ -21,7 +21,7 @@ prompt_squiggle_pp_setup() {
 
     if [[ "$USER" = 'root' ]]
     then
-        base_prompt="%B%F{$clr_root}%m%k "
+        base_prompt="%B %F{$clr_root}%m "
     else
         base_prompt="%B "
     fi
@@ -30,7 +30,7 @@ prompt_squiggle_pp_setup() {
 
     path_prompt="%F{$clr_path}%(5~|%-1~/…/%3~|%4~) "
     vcs_prompt='%F{$clr_vcs}${vcs_info_msg_0_:+${vcs_info_msg_0_} }%f'
-    post_prompt="%b%f%k "
+    post_prompt="%b%f "
 
     PS1="${hist_mark}${jobs}${base_prompt}${path_prompt}${vcs_prompt}"
     PS1="${PS1}%B%F{$clr_trail}%(0?.%#.%S%#%s)$post_prompt"
