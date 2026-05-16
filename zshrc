@@ -92,8 +92,7 @@ alias hhttp="http --print=Hh"
 
 # we keep full path to `feh` executable in alias for 'feh' alias not to mess
 # with 'feht'
-feh_base="$(which feh) -FqV --auto-rotate --sort filename \
-    --font 'DejaVuSans/11' -C /usr/share/fonts/dejavu/"
+feh_base="$(which feh) -FqV --sort filename"
 
 alias feht="$feh_base -t"
 alias feh="$feh_base -Y"
