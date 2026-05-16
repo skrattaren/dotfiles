@@ -91,12 +91,6 @@ if has('gui_running')
     set guioptions=a
     set cursorcolumn
     set mouse="a"
-    if has("gui_macvim")
-        set macligatures
-        set guifont=Fira\ Code:h16
-    elseif ! has("gui_vimr")
-        set guifont=xos4\ Terminus\ 11
-    endif
 else
     set mouse=
 endif
