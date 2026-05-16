@@ -1,6 +1,6 @@
 # set LS_COLORS
-if [[ -f ~/.dir_colors ]]; then
-    eval `dircolors -b ~/.dir_colors`
+if [[ -f ~/.config/dir_colors ]]; then
+    eval `dircolors -b ~/.config/dir_colors`
 else
     eval `dircolors -b /etc/DIR_COLORS`
 fi
