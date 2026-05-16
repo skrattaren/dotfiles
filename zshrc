@@ -90,16 +90,6 @@ alias qcp="qcp --format=do"
 alias aria2c="aria2c -x8 -k10M"
 alias hhttp="http --print=Hh"
 
-if hash mpv 2>/dev/null; then
-    MPLAYER="mpv"
-elif hash mplayer2 2>/dev/null; then
-    MPLAYER="mplayer2"
-else
-    MPLAYER="mplayer"
-fi
-
-alias dvdplay="$MPLAYER dvd://1 -dvd-device"
-
 # we keep full path to `feh` executable in alias for 'feh' alias not to mess
 # with 'feht'
 feh_base="$(which feh) -FqV --auto-rotate --sort filename \
