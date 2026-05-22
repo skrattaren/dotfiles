@@ -45,6 +45,8 @@ unbindurl bazqux\.com\/i j
 unbindurl bazqux\.com\/i k
 unbindurl bazqux\.com\/i r
 
+set editorcmd nvim-qt --nofork
+
 " `about:config`
 "set! signon.autofillForms=false
 "set! extensions.pocket.enabled=false
