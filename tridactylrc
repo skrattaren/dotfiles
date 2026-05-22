@@ -17,7 +17,10 @@ bind --mode=visual S composite js document.getSelection().toString() | fillcmdli
 
 bind J tabnext
 bind K tabprev
-bind gp buffer #
+" some day I'll remember some
+bind gP buffer #
+bind gv buffer #
+bind % buffer #
 
 bind ,t fillcmdline tabopen -b
 bind ,T current_url tabopen -b
