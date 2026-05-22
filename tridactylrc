@@ -7,6 +7,8 @@ guiset_quiet navbar autohide
 " quiet sanity
 fixamo_quiet
 
+set keyboardlayoutforce true
+
 " I tried to get used to defaults, and I failed
 bind s fillcmdline tabopen search
 bind S fillcmdline open search
